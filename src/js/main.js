@@ -1,5 +1,8 @@
 /** @format */
 
+console.log("HELLO YOU"+templateDirectoryUri);
+
+
 var int;
 function setInt() {
   clearInterval(int);
@@ -44,8 +47,11 @@ hiddenElements.forEach((el) => observer.observe(el));
 const imgElement = document.getElementById("eyebrow");
 
 // the two links to switch between
-const imgSrc1 = "images/left1.png";
-const imgSrc2 = "images/left2.png";
+
+var imageUrl1 = templateDirectoryUri + '/images/left1.png';
+var imageUrl2 = templateDirectoryUri + '/images/left2.png';
+const imgSrc1 = imageUrl1;
+const imgSrc2 = imageUrl2;
 
 // function to switch the img src
 function switchImgSrc() {
@@ -76,3 +82,8 @@ $("#overlay").toggleClass("open");
 
 
 history.scrollRestoration = "manual";
+
+
+// get theme URI FOR JS
+
+

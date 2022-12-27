@@ -51,24 +51,22 @@ Since it is dangerous to go alone, take this kitten:
   <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript"
-    scr="https://cdnjs.cloudflare.com/ajax/libs/animateCSS/1.2.2/jquery.animatecss.min.js"></script>
-    <?php wp_head(); ?>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript" scr="https://cdnjs.cloudflare.com/ajax/libs/animateCSS/1.2.2/jquery.animatecss.min.js"></script>
+  <?php wp_head(); ?>
 </head>
 
 <body>
-<?php wp_body_open(); ?>
+  <?php wp_body_open(); ?>
+
+  <!-- This script is to parse the path into js as well for the shop area, i know it is a bit messy but it was the quickest solution (yet) -->
+  <script>
+    var templateDirectoryUri = '<?php echo get_template_directory_uri(); ?>';
+  </script>
+<!-- ----------------------------------------------------------------------------------------------------------------------- -->
 
 
   <div id="home"></div>
@@ -83,7 +81,7 @@ Since it is dangerous to go alone, take this kitten:
     <div class="overlay" id="overlay">
       <nav class="overlay-menu">
         <ul>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.php">About</a></li>
           <li><a href="#workshop">Workshops</a></li>
           <li><a href="#hiring">Jobs</a></li>
           <li><a href="#shopArea">Shop</a></li>
@@ -99,8 +97,8 @@ Since it is dangerous to go alone, take this kitten:
       </div>
 
       <div class="topRight">
-        <a href="about.html">ABOUT</a>
-        
+        <a href="about.php">ABOUT</a>
+
         <a href="#workshop">WORKSHOPS</a>
         <a href="#hiring">JOBS</a>
         <a href="#shopArea">SHOP</a>
@@ -112,7 +110,8 @@ Since it is dangerous to go alone, take this kitten:
     <div class="heroimage">
       <div class="leftArea">
 
-        <img src="<?php echo get_template_directory_uri();?>/images/logohero_mobile.png" alt="Placeholder">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/logohero_mobile.png" alt="Placeholder">
+
       </div>
 
       <div class="rightArea">
@@ -154,14 +153,14 @@ Since it is dangerous to go alone, take this kitten:
       </div>
 
       <div class="right">
-        <img src="<?php echo get_template_directory_uri();?>/images/croissant.jpg" alt="fresh baked croissant">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/croissant.jpg" alt="fresh baked croissant">
 
       </div>
 
     </div>
     <div class="second">
       <div class="left">
-        <img src="<?php echo get_template_directory_uri();?>/images/mac.jpg" alt="macbook and coffee, working in cafe">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/mac.jpg" alt="macbook and coffee, working in cafe">
       </div>
       <div class="right">
         <div class="textcontainer">
@@ -179,7 +178,7 @@ Since it is dangerous to go alone, take this kitten:
         </div>
 
         <div class="emoji">
-          <img src="<?php echo get_template_directory_uri();?>/images/emoji.png" alt="Robo Emoji which Johannes will like, i think">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/emoji.png" alt="Robo Emoji which Johannes will like, i think">
         </div>
       </div>
     </div>
@@ -196,14 +195,14 @@ Since it is dangerous to go alone, take this kitten:
       </div>
 
       <div class="right">
-        <img src="<?php echo get_template_directory_uri();?>/images/workshop.jpg" alt="group of bakers doing their best">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/workshop.jpg" alt="group of bakers doing their best">
 
       </div>
 
     </div>
     <div id="hiring">
       <div class="left">
-        <img src="<?php echo get_template_directory_uri();?>/images/hiring.svg" alt="hiring font">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/hiring.svg" alt="hiring font">
 
       </div>
       <div class="right">
@@ -239,13 +238,13 @@ Since it is dangerous to go alone, take this kitten:
           </p>
 
           <div class="buttonShopArea">
-            <a class="buttonShop" href="shop.html"> SHOP NOW!</a>
+            <a class="buttonShop" href="shop.php"> SHOP NOW!</a>
           </div>
         </div>
 
       </div>
       <div class="imageright">
-        <img src="<?php echo get_template_directory_uri();?>/images/right.png" alt="ich geh mci hackeln">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/right.png" alt="ich geh mci hackeln">
       </div>
 
 
@@ -259,14 +258,13 @@ Since it is dangerous to go alone, take this kitten:
           <p>Ben Müller</p>
           <a href="tel:+43 662 236 222 57"> 0662 236 222 57 </a><br>
           <a href="mailto:beschwerden@backit.com">ben@backit.com</a><br>
-          <a href="http://maps.google.com/?q=1200 Getreidegasse1, 5020 Salzburg" target="_blank"
-            rel="noopener noreferrer">Getreidegasse1,<br> 5020 Salzburg</a>
+          <a href="http://maps.google.com/?q=1200 Getreidegasse1, 5020 Salzburg" target="_blank" rel="noopener noreferrer">Getreidegasse1,<br> 5020 Salzburg</a>
 
         </div>
       </div>
 
       <div class="mid">
-        <img src="<?php echo get_template_directory_uri();?>/images/benlogobrown.svg" alt="ich geh mci hackeln">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/benlogobrown.svg" alt="ich geh mci hackeln">
 
       </div>
 
@@ -302,6 +300,7 @@ Since it is dangerous to go alone, take this kitten:
 
 
   <?php wp_footer(); ?>
+
 </body>
 
 
