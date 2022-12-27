@@ -1,0 +1,184 @@
+/** @format */
+
+.buttonDivApp {
+  align-items: center;
+}
+
+.buttonApplication {
+  font-family: "Outfit";
+  font-size: 36px;
+  font-weight: 800;
+
+  border-radius: 8px;
+  color: white;
+  padding: 20px 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-color: #ffffff;
+  border: 0px solid rgb(255, 255, 255);
+  background-color: #40bf75;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 6px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 4vh;
+
+  @media (max-width: 600px) {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 80vh;
+    left: 0;
+    right: 0;
+
+    border-radius: 3px;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 35px;
+  }
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+.buttonApplication:hover {
+  background-color: #1b3327;
+  color: #ffffff;
+  transition: 0.85s;
+  text-decoration: none;
+}
+
+.buttonShopArea {
+  padding-top: 10%;
+  align-items: center;
+  animation: hover 6s;
+  animation-iteration-count: infinite;
+
+  @keyframes hover {
+    0% {
+      transform: translateY(0%);
+    }
+
+    50% {
+      transform: translateY(+10%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+  }
+}
+
+.buttonShop {
+  font-family: "Outfit";
+  font-size: 36px;
+  font-weight: 800;
+
+  border-radius: 8px;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-color: #ffffff;
+  border: 0px solid rgb(255, 255, 255);
+  background-color: #40bf75;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 6px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 4vh;
+
+  @media (max-width: 600px) {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 80vh;
+    left: 0;
+    right: 0;
+
+    border-radius: 3px;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 35px;
+  }
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+.buttonApplication:hover {
+  background-color: #1b3327;
+  color: #ffffff;
+  transition: 0.85s;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .buttonDivApp {
+    vertical-align: center;
+
+    align-items: center;
+    align-content: center;
+    height: 100px;
+    margin-bottom:5%;
+    .buttonApplication {
+      position: relative;
+      top: 0vh;
+      align-items: center;
+      align-content: center;
+
+      padding: 0;
+      vertical-align: center;
+      padding-left: 43px;
+      padding-right: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 5px;
+      background-color: #40bf75;
+      
+    }
+  }
+  .buttonShopArea {
+    vertical-align: center;
+
+    align-items: center;
+    align-content: center;
+    height: 50px;
+    margin-bottom:5%;
+    .buttonShop {
+      position: relative;
+      top: 0vh;
+      align-items: center;
+      align-content: center;
+
+
+      vertical-align: center;
+      padding:10px;
+      border-radius: 5px;
+      background-color: #40bf75;
+      font-size: 20px;
+      font-weight: 300;
+      
+      
+    }
+  }
+}

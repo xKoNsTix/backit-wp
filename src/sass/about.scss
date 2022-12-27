@@ -1,0 +1,133 @@
+/** @format */
+
+.aboutMain {
+  background-color: #ae8e7c;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .imageDiv {
+    width: 50%;
+
+    height: 100%;
+    position: relative;
+    transition: all 0.5s;
+
+    .image-1 {
+      max-height: 85vh;
+      position: absolute;
+      bottom: 0;
+      margin-left: 0;
+      margin-left: 100px;
+      z-index: 998;
+      transition: all 0.7s;
+    }
+
+    .image-2 {
+      max-height: 85vh;
+      position: absolute;
+      bottom: 0;
+      margin-left: 0;
+      margin-left: 100px;
+      z-index: 998;
+      transition: all 0.7s;
+    }
+  }
+  .image-1 {
+    display: block;
+    opacity: 1; /* Set the initial opacity of the first image */
+  }
+
+  .image-2 {
+    display: none;
+    opacity: 0; /* Set the initial opacity of the second image */
+  }
+
+  .imageDiv:hover .image-1 {
+    opacity: 0; /* Fade out the first image on hover */
+  }
+
+  .imageDiv:hover .image-2 {
+    display: block;
+    opacity: 1; /* Fade in the second image on hover */
+  }
+
+  .txt {
+    width: 50%;
+    height: 100%;
+    font-family: "Outfit";
+    align-items: center;
+    vertical-align: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    display: flex;
+    z-index: 999;
+    .container {
+      width: 70%;
+      align-items: center;
+      margin-left: 0;
+      margin-right: 0;
+      vertical-align: center;
+      margin-bottom: auto;
+      margin-top: auto;
+    }
+
+    h1 {
+      color: white;
+      font-size: 56px;
+      font-weight: 300;
+    }
+    p {
+      margin-top: 10%;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+// --------------------------------------------------------
+// --------------------------------------------------------
+// --------------------------------------------------------
+// --------------------------------------------------------
+
+@media (max-width: 900px) {
+  
+    body{
+        background-color:#ae8e7c; ;
+    }
+  .aboutMain {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .txt {
+        width:100%;
+        background-color:#ae8e7c; ;
+
+        margin-top:5vh;
+
+      .container {
+        margin-top:0;
+        width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+
+      }
+    }
+
+    .imageDiv {
+      width: 100%;
+
+      height: 100vh;
+
+      .image-1 {
+        max-height: 20vh;
+        position: absolute;
+        bottom: 0;
+        margin-left: 0;
+        margin-left: 100px;
+        z-index: 998;
+        transition: all 0.7s;
+      }
+    }
+  }
+}

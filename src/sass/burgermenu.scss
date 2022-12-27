@@ -1,0 +1,493 @@
+/** @format */
+
+.menu {
+  $color-background: #40bf75;
+  $color-main: #40bf75;
+  $color-active: #dcc2b3;
+  $color-link: #fff;
+
+  $button-height: 27px;
+  $button-width: 35px;
+  z-index: 10000;
+
+  body {
+    background: $color-background;
+  }
+
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 40%;
+    left: 0;
+    margin: 0 auto;
+
+    p {
+      font-size: 20px;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      color: $color-main;
+      text-decoration: none;
+      font-size: 20px;
+      overflow: hidden;
+      top: 5px;
+      color: black;
+
+      &:after {
+        content: "";
+        position: absolute;
+        background: $color-main;
+        height: 2px;
+        width: 0%;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 0;
+        transition: 0.35s ease;
+      }
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+
+  h1 {
+    position: relative;
+    text-align: center;
+  }
+
+  .button_container {
+    position: fixed;
+    top: 2%;
+    right: 3%;
+    height: $button-height;
+    width: $button-width;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.25s ease;
+    color: #200f05;
+    z-index: 10001;
+    @media (min-width: 901px) {
+      width: 0;
+      height: 0;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.active {
+      .top {
+        transform: translateY(10px) translateX(0) rotate(45deg);
+        background: $color-active;
+      }
+      a/** @format */
+
+.menu {
+        $button-height: 27px;
+        $button-width: 35px;
+        z-index: 10000;
+
+        body {
+          background: $color-background;
+        }
+
+        .container {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          top: 40%;
+          left: 0;
+          margin: 0 auto;
+
+          p {
+            font-size: 20px;
+          }
+
+          a {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            color: $color-main;
+            text-decoration: none;
+            font-size: 20px;
+            overflow: hidden;
+            top: 5px;
+            color: black;
+
+            &:after {
+              content: "";
+              position: absolute;
+              background: $color-main;
+              height: 2px;
+              width: 0%;
+              transform: translateX(-50%);
+              left: 50%;
+              bottom: 0;
+              transition: 0.35s ease;
+            }
+            &:hover:after {
+              width: 100%;
+            }
+          }
+        }
+
+        h1 {
+          position: relative;
+          text-align: center;
+        }
+
+        .button_container {
+          position: fixed;
+          top: 2%;
+          left: 2%;
+          height: $button-height;
+          width: $button-width;
+          cursor: pointer;
+          z-index: 100;
+          transition: opacity 0.25s ease;
+          color: #fff;
+          z-index: 10001;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          &.active {
+            .top {
+              transform: translateY(10px) translateX(0) rotate(45deg);
+              background: $color-active;
+            }
+            .middle {
+              opacity: 0;
+              background: $color-active;
+            }
+
+            .bottom {
+              transform: translateY(-10px) translateX(0) rotate(-45deg);
+              background: $color-active;
+            }
+          }
+
+          span {
+            background: $color-main;
+            border: none;
+            height: 5px;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            transition: all 0.35s ease;
+            cursor: pointer;
+            background: #fff;
+
+            &:nth-of-type(2) {
+              top: 10px;
+            }
+
+            &:nth-of-type(3) {
+              top: 20px;
+            }
+          }
+        }
+
+        .overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          visibility: hidden;
+          transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+          z-index: 10000;
+
+          &:before {
+            content: "";
+            background: $color-main;
+            left: -55%;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            transition: left 0.35s ease;
+          }
+
+          &:after {
+            content: "";
+            background: $color-main;
+            right: -55%;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            transition: all 0.35s ease;
+          }
+
+          &.open {
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+
+            &:before {
+              left: 0;
+            }
+
+            &:after {
+              right: 0;
+            }
+
+            li {
+              animation: fadeInRight 0.5s ease forwards;
+              animation-delay: 0.35s;
+
+              &:nth-of-type(2) {
+                animation-delay: 0.45s;
+              }
+              &:nth-of-type(3) {
+                animation-delay: 0.55s;
+              }
+              &:nth-of-type(4) {
+                animation-delay: 0.65s;
+              }
+            }
+          }
+          nav {
+            position: relative;
+            height: 70%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 35px;
+
+            font-weight: 400;
+            text-align: center;
+            z-index: 100;
+          }
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
+            position: relative;
+            height: 100%;
+
+            li {
+              display: block;
+              height: 25%;
+              height: calc(100% / 4);
+              min-height: 50px;
+              position: relative;
+              opacity: 0;
+
+              a {
+                display: block;
+                position: relative;
+                color: $color-link;
+                text-decoration: none;
+                overflow: hidden;
+                font-size: 32px;
+
+                &:hover:after,
+                &:focus:after,
+                &:active:after {
+                  width: 100%;
+                }
+
+                &:after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  width: 0%;
+                  transform: translateX(-50%);
+                  height: 3px;
+                  background: $color-link;
+                  transition: 0.35s;
+                }
+              }
+            }
+          }
+        }
+
+        @keyframes fadeInRight {
+          0% {
+            opacity: 0;
+            left: 20%;
+          }
+          100% {
+            opacity: 1;
+            left: 0;
+          }
+        }
+      }
+
+      .middle {
+        opacity: 0;
+        background: $color-active;
+      }
+
+      .bottom {
+        transform: translateY(-10px) translateX(0) rotate(-45deg);
+        background: $color-active;
+      }
+    }
+
+    span {
+      @media (max-width: 900px) {
+        background: $color-main;
+        border: none;
+        height: 6px;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        transition: all 0.35s ease;
+        cursor: pointer;
+        background: #ffffff;
+
+        &:nth-of-type(2) {
+          top: 10px;
+        }
+
+        &:nth-of-type(3) {
+          top: 20px;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+    z-index: 10000;
+
+    &:before {
+      content: "";
+      background: $color-main;
+      left: -55%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      transition: left 0.35s ease;
+    }
+
+    &:after {
+      content: "";
+      background: $color-main;
+      right: -55%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      transition: all 0.35s ease;
+    }
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+
+      li {
+        animation: fadeInRight 0.5s ease forwards;
+        animation-delay: 0.35s;
+
+        &:nth-of-type(2) {
+          animation-delay: 0.45s;
+        }
+        &:nth-of-type(3) {
+          animation-delay: 0.55s;
+        }
+        &:nth-of-type(4) {
+          animation-delay: 0.65s;
+        }
+      }
+    }
+    nav {
+      position: relative;
+      height: 70%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 45px;
+
+      font-weight: 400;
+      text-align: center;
+      z-index: 100;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: inline-block;
+      position: relative;
+      height: 100%;
+
+      li {
+        display: block;
+        height: 25%;
+        height: calc(100% / 4);
+        min-height: 50px;
+        position: relative;
+        opacity: 0;
+
+        a {
+          display: block;
+          position: relative;
+          color: $color-link;
+          text-decoration: none;
+          overflow: hidden;
+          font-size: 45px;
+          font-family: "Outfit";
+          color: #200f05;
+
+          &:hover:after,
+          &:focus:after,
+          &:active:after {
+            width: 100%;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0%;
+            transform: translateX(-50%);
+            height: 3px;
+            background: $color-link;
+            transition: 0.35s;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+/** @format */
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  height: 4vh;
+  min-height: 60px;
+  font-family: "Outfit";
+  background-color: #40bf75;
+  @media (max-width: 900px) {
+    height: 0vh;
+    min-height:0;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  vertical-align: center;
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 4vh;
+  @media (max-width: 900px) {
+    opacity: 0;
+  }
+
+  .topLeft {
+    width: 50%;
+    text-align: left;
+    margin-left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: center;
+
+    p {
+      color: #200f05;
+      text-decoration: none;
+      padding-top: auto;
+      padding-bottom: auto;
+      font-size: 36px;
+      vertical-align: center;
+      margin: 0;
+    }
+  }
+
+  .topRight {
+    width: 50%;
+    text-align: right;
+    margin-right: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: center;
+    @media (max-width: 900px) {
+      opacity: 0;
+    }
+
+    a {
+      color: #200f05;
+      text-decoration: none;
+      padding-top: auto;
+      padding-bottom: auto;
+      font-size: 24px;
+      vertical-align: middle;
+      margin: 2%;
+      vertical-align: center;
+    }
+  }
+}
+.topLine {
+  height: 4px;
+  background-color: black;
+  width: 100%;
+  @media (max-width: 900px) {
+    height: 0vh;
+  }
+}
+
+.hero {
+  background-image: url("images/heroblur.jpg");
+  background-size: cover;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 900px) {
+    position: relative;
+    height: 50vh;
+  }
+  .leftArea {
+
+    width: 100%;
+    position: absolute;
+    margin-left: 2%;
+    top: 25%;
+    bottom: 50%;
+    @media (max-width: 900px) {
+      align-items: center;
+
+    }
+    img {
+      height: 40vh;
+      vertical-align: middle;
+      @media (max-width: 900px) {
+        height: auto;
+        width: 80%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        margin: 0 auto;
+        padding: 10px;
+
+      }
+    }
+  }
+}

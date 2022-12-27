@@ -1,0 +1,403 @@
+/** @format */
+
+.overviews {
+  display: flex;
+  flex-direction: column;
+
+  .textcontainer {
+    text-align: left;
+
+    font-family: "Outfit";
+
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    max-width: 1000px;
+    font-weight: 500;
+    @media (max-width: 900px) {
+      font-size: 25px;
+    }
+  }
+  p {
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 475px;
+    @media (max-width: 900px) {
+      font-size: 12px;
+    }
+  }
+}
+.first,
+#workshop {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+  width: 100%;
+  vertical-align: center;
+  background-color: #dcc2b3;
+
+  .left {
+    width: 50%;
+
+    align-items: center;
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    padding-bottom: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    width: 50%;
+    height: 65vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// SECOND ------------------------------------------------------------
+
+.second {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+  width: 100%;
+  vertical-align: center;
+  background-color: #e8d7ce;
+
+  .right {
+    width: 50%;
+    height: 65vh;
+
+    align-items: center;
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    padding-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .emoji {
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      width: 50px;
+      img {
+        width: 70px;
+      }
+    }
+  }
+
+  .left {
+    width: 50%;
+    height: 65vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+#hiring {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+  width: 100%;
+  vertical-align: center;
+  background-color: #e8d7ce;
+
+  .right {
+    width: 50%;
+    height: 65vh;
+
+    align-items: center;
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    padding-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .left {
+    width: 50%;
+    height: 65vh;
+    background-image: url("images/chalkboard.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    vertical-align: center;
+    img {
+      height: 50%;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+// mediaquery first
+
+@media (max-width: 900px) {
+  .textcontainer {
+    text-align: center;
+
+    font-family: "Outfit";
+
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first {
+    display: flex;
+
+    height: 50vh;
+    width: 100%;
+    vertical-align: center;
+    background-color: #dcc2b3;
+
+    .left {
+      width: 100%;
+      height: 50vh;
+
+      align-items: center;
+      align-content: space-around;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin: auto;
+      padding-bottom: auto;
+      display: flex;
+      flex-direction: column;
+
+      background-image: url("images/croissant_blur.jpg");
+      background-size: cover;
+
+      h2,
+      p {
+        color: white;
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      p {
+        line-height: 20px;
+      }
+    }
+
+    .right {
+      width: 0%;
+      height: 0vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+//mediaquery second
+
+@media (max-width: 900px) {
+  .textcontainer {
+    text-align: center;
+
+    font-family: "Outfit";
+
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second {
+    display: flex;
+
+    height: 50vh;
+    width: 100%;
+    vertical-align: center;
+    background-color: #dcc2b3;
+
+    .right {
+      width: 100%;
+      height: 50vh;
+
+      align-items: center;
+      align-content: space-around;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin: auto;
+      padding-bottom: auto;
+      display: flex;
+      flex-direction: column;
+
+      background-image: url("images/mac_blurred.jpg");
+      background-size: cover;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .emoji {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+      h2,
+      p {
+        color: white;
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      p {
+        line-height: 20px;
+      }
+    }
+
+    .left {
+      width: 0%;
+      height: 0vh;
+    }
+  }
+}
+
+//mediaquery Workshop
+@media (max-width: 900px) {
+  .textcontainer {
+    text-align: center;
+
+    font-family: "Outfit";
+
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #workshop {
+    display: flex;
+
+    height: 50vh;
+    width: 100%;
+    vertical-align: center;
+    background-color: #dcc2b3;
+
+    .left {
+      width: 100%;
+      height: 50vh;
+
+      align-items: center;
+      align-content: space-around;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin: auto;
+      padding-bottom: auto;
+      display: flex;
+      flex-direction: column;
+
+      background-image: url("images/workshop_blur.jpg");
+      background-size: cover;
+
+      h2,
+      p {
+        color: white;
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      p {
+        line-height: 20px;
+      }
+    }
+
+    .right {
+      width: 0%;
+      height: 0vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+//mediaquery hiring
+@media (max-width: 900px) {
+  #hiring {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100%;
+    vertical-align: center;
+    background-color: #e8d7ce;
+
+    .right {
+      width: 100%;
+      height: 50vh;
+
+      align-items: center;
+      align-content: space-around;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin: auto;
+      padding-bottom: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background-image: url("images/chalkboard.jpg");
+      background-size: cover;
+      .textcontainer {
+        align-items: center;
+        align-content: center;
+        
+      }
+
+      h2,
+      p {
+        color: white;
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      p {
+        line-height: 20px;
+      }
+    }
+
+    .left {
+      width: 0%;
+      height: 50vh;
+    }
+  }
+}

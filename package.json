@@ -1,0 +1,28 @@
+{
+  "name": "backit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xKoNsTix/backit.git"
+  },
+  "keywords": [
+    "bakery",
+    "backs",
+    "backit",
+    "backlava"
+  ],
+  "author": "konsti k.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xKoNsTix/backit/issues"
+  },
+  "homepage": "https://github.com/xKoNsTix/backit#readme",
+  "dependencies": {
+    "browsersync": "^0.0.1-security"
+  }
+}

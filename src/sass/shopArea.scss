@@ -1,0 +1,172 @@
+/** @format */
+
+#shopArea {
+  height: 70vh;
+  font-family: "Outfit";
+  background-color: #ae8e7c;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .midDiv {
+    align-items: center;
+    width: 50%;
+    height: 70v;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 999;
+    .textcontainer {
+      display: flex;
+      flex-direction: column;
+
+      font-family: "Outfit";
+
+      align-content: space-around;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: 50px;
+        margin-bottom: 30px;
+
+        font-weight: 500;
+        color: white;
+        text-align: center;
+      }
+      p {
+        font-size: 24px;
+        line-height: 36px;
+        max-width: 475px;
+        color: white;
+        text-align: center;
+        max-width: 450px;
+      }
+    }
+  }
+
+  .imageright {
+    width: 33.333%;
+    align-items: right;
+    position: relative;
+    float: none;
+    animation: shake 10s;
+    animation-iteration-count: infinite;
+    z-index: 998;
+    img {
+      padding-top: 100px;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: translate(1px, 1px) rotate(0deg);
+      }
+
+      50% {
+        transform: translate(1px, -1px) rotate(+10deg);
+      }
+      50% {
+        transform: translate(1px, -1px) rotate(-10deg);
+      }
+    }
+  }
+  img {
+    max-height: 70vh;
+
+    z-index: 101;
+    position: absolute;
+
+    float: none;
+    overflow: hidden;
+  }
+  .imageleft {
+    width: 33.333%;
+    margin-left: 0;
+
+    img {
+      max-height: 70vh;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #shopArea {
+    height: 50vh;
+    font-family: "Outfit";
+    background-color: #ae8e7c;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    .midDiv {
+      vertical-align: top;
+      width: 50%;
+      height: 70v;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      margin-left: 1%;
+      z-index: 999;
+      .textcontainer {
+        display: flex;
+        flex-direction: column;
+
+        font-family: "Outfit";
+
+        flex-direction: column;
+        align-items: center;
+        padding-left: 60px;
+        margin-top: -1px;
+        width: 100%;
+
+        h2 {
+          font-size: 25px;
+          margin-bottom: 30px;
+
+          font-weight: 500;
+          color: white;
+          text-align: left;
+        }
+        p {
+          font-size: 12px;
+          line-height: 36px;
+          max-width: 475px;
+          color: white;
+          text-align: left;
+          max-width: 600px;
+          line-height: 24px;
+          margin-bottom: 2%;
+        }
+      }
+    }
+    .imageleft {
+      width: 0;
+      height: 0;
+      img {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+    }
+    .imageright {
+      img {
+        float: right;
+        opacity: 1;
+        position: absolute;
+        width: 40vw;
+        animation: none;
+        left: 20%;
+        bottom: -5%;
+        z-index: 998;
+        @keyframes shake {
+          
+        }
+      }
+    }
+  }
+}

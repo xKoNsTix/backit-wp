@@ -1,0 +1,198 @@
+// /** @format */
+
+.contact {
+  height: 20vh;
+  min-height:200px;
+  display: flex;
+  flex-direction: row;
+  background-color: #40bf75;
+
+  .left {
+    width: 33.33%;
+    height: 100%;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+
+    .contactText {
+      margin: auto;
+      padding: auto;
+      flex-direction: column;
+      margin-left: 8%;
+
+
+      a {
+        text-decoration: none;
+        font-family: "Outfit";
+        font-size: 24px;
+        color: #200f05;
+      }
+
+      p {
+        text-decoration: none;
+        font-family: "Outfit";
+        font-size: 24px;
+        color: #200f05;
+        margin:0;
+        padding:0;
+      }
+    }
+  }
+
+  .mid {
+    width: 33.33%;
+    height: 100%;
+    margin: auto;
+    padding: auto;
+    display:flex;
+    flex-direction: column;
+
+    vertical-align:center;
+    align-items:center;
+    img {
+      height: 80%;
+
+      display:flex;
+      flex-direction: column;
+      padding-top:5%;
+      
+
+      
+    }
+  }
+
+  .right {
+    width: 33.33%;
+    height: 100%;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+    text-align:right;
+
+    .contactText {
+      margin: auto;
+      padding: auto;
+      flex-direction: column;
+      margin-right: 8%;
+
+      a {
+        text-decoration: none;
+        font-family: "Outfit";
+        font-size: 24px;
+        color: #200f05;
+        width:0;
+      }
+
+      p {
+        text-decoration: none;
+        font-family: "Outfit";
+        font-size: 24px;
+        color: #200f05;
+        margin:0;
+        padding:0;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------
+
+
+@media(max-width:900px){
+
+  .contact {
+    height: 35vh;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #40bf75;
+  
+    .left {
+      width: 40%;
+      height: 35vh;
+  
+      display: flex;
+      align-items: center;
+      
+  
+      .contactText {
+        flex-direction: column;
+        margin-left: 8%;
+        margin-top: 0;
+        line-height:4vh;  
+        margin-right: 2%;
+        margin-top:0;
+        margin-bottom:0;
+  
+        a {
+          text-decoration: none;
+          font-family: "Outfit";
+          font-size: 16px;
+          color: #200f05;
+
+        }
+  
+        p {
+          text-decoration: none;
+          font-family: "Outfit";
+          font-size: 16px;
+          color: #200f05;
+          margin-bottom:0;
+
+        }
+      }
+    }
+  
+    .mid {
+      width: 60%;
+      height: 100%;
+      margin: auto;
+      padding: auto;
+      display: flex;
+      flex-direction: column;
+  
+      vertical-align: center;
+      align-items: center;
+      img {
+        height: 50%;
+  
+        display: flex;
+        flex-direction: column;
+        padding-top: 30%;
+      }
+    }
+  
+    .right {
+      width: 0%;
+      height: 0%;
+      opacity:0;
+      vertical-align: center;
+      display: flex;
+      align-items: center;
+      text-align: right;
+  
+      .contactText {
+        margin: auto;
+        padding: auto;
+        flex-direction: column;
+        margin-right: 8%;
+  
+        a {
+          text-decoration: none;
+          font-family: "Outfit";
+          font-size: 16px;
+          color: #200f05;
+        }
+  
+        p {
+          text-decoration: none;
+          font-family: "Outfit";
+          font-size: 16px;
+          color: #200f05;
+        }
+      }
+    }
+  }
+}

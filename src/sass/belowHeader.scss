@@ -1,0 +1,88 @@
+/** @format */
+
+.greenquote {
+  height: 50vh;
+  background-color: #40bf75;
+  font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .sake {
+    font-size: 150px;
+    
+    margin-top: 0;
+    top: 0;
+    text-align: top;
+    color: #161819;
+    line-height: 170px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    height: auto;
+
+    h1 {
+      text-align: top;
+      color: #161819;
+      margin-top: -1px !important;
+      padding-top: -20px !important;
+
+    }
+  }
+
+  .zeit {
+    font-size: 56px;
+    text-align: center;
+
+    p {
+      color: white;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .oida {
+    font-size: 48px;
+    p {
+      color: white;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .greenquote {
+    height: 50vh;
+    position:relative;
+
+    .sake {
+      line-height: 80px;
+      h1 {
+        font-size: 50%;
+        padding-top: -20px !important;
+        font-weight: 300;
+        text-align: left;
+        margin-bottom: 0 !important;
+      }
+    }
+    .zeit {
+      position:absolute;
+      bottom:0;
+      p {
+
+        font-size: 50%;
+        font-weight: 100;
+        text-align: left;
+        margin-top: 5vh;
+        margin-left:1vh;
+      }
+    }
+    .oida {
+      width:0;
+        height:0;
+      p {
+        opacity: 0;
+        
+      }
+    }
+  }
+}
