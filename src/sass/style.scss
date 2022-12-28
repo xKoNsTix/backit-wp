@@ -1,5 +1,11 @@
 /** @format */
 
+
+
+// GLOBAL AREA 
+
+$color-main: #32955B;
+
 html,
 body {
   margin: 0;
@@ -11,6 +17,11 @@ body {
   background: transparent;
   scroll-behavior: smooth;
 }
+
+
+// ---------------------------------------------------------------------------------------------------------
+
+
 @import "fonts";
 @import "header";
 @import "belowHeader";
@@ -22,6 +33,8 @@ body {
 @import "burgermenu";
 @import "about";
 @import "shop";
+
+
 
 body {
   overflow-x: hidden;
@@ -37,5 +50,3 @@ body {
       overflow-x: hidden; 
   }
 }
-
-

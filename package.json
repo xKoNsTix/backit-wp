@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/xKoNsTix/backit#readme",
   "dependencies": {
-    "browsersync": "^0.0.1-security"
+    "browsersync": "^0.0.1-security",
+    "esbuild": "^0.16.12"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11"
   }
 }

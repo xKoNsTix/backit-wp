@@ -49,4 +49,5 @@ po/*~
 rsconnect/
 
 /public/wp-config.php
-
+node_modules/
+.DS_Store

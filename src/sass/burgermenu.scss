@@ -1,8 +1,9 @@
 /** @format */
 
 .menu {
-  $color-background: #40bf75;
-  $color-main: #40bf75;
+  
+  $color-main: $color-main;
+  $color-background: $color-main;
   $color-active: #dcc2b3;
   $color-link: #fff;
 

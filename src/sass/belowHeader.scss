@@ -1,8 +1,8 @@
 /** @format */
 
 .greenquote {
-  height: 50vh;
-  background-color: #40bf75;
+  height: 65vh;
+  background-color: $color-main;
   font-family: "Roboto";
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
 
     h1 {
       text-align: top;
-      color: #161819;
+      color: #242529;
       margin-top: -1px !important;
       padding-top: -20px !important;
 

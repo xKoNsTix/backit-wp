@@ -5,7 +5,7 @@
   min-height:200px;
   display: flex;
   flex-direction: row;
-  background-color: #40bf75;
+  background-color: $color-main;
 
   .left {
     width: 33.33%;
@@ -107,7 +107,7 @@
     min-height: 200px;
     display: flex;
     flex-direction: row-reverse;
-    background-color: #40bf75;
+    background-color: $color-main;
   
     .left {
       width: 40%;

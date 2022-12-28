@@ -18,7 +18,7 @@
   }
 
   h2 {
-    font-size: 50px;
+    font-size: 48px;
     margin-bottom: 30px;
     max-width: 1000px;
     font-weight: 500;
@@ -27,7 +27,7 @@
     }
   }
   p {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 36px;
     max-width: 475px;
     @media (max-width: 900px) {
@@ -94,7 +94,7 @@
     position: relative;
     .emoji {
       position: absolute;
-      bottom: 0;
+      bottom: -4.5px;
       right: 10%;
       width: 50px;
       img {

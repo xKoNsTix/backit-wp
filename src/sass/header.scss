@@ -6,7 +6,7 @@
   height: 4vh;
   min-height: 60px;
   font-family: "Outfit";
-  background-color: #40bf75;
+  background-color: $color-main;
   @media (max-width: 900px) {
     height: 0vh;
     min-height:0;
@@ -90,11 +90,12 @@
 
     width: 100%;
     position: absolute;
-    margin-left: 2%;
+    margin-left: 7%;
     top: 25%;
     bottom: 50%;
     @media (max-width: 900px) {
       align-items: center;
+      margin-left:0;
 
     }
     img {
@@ -102,7 +103,7 @@
       vertical-align: middle;
       @media (max-width: 900px) {
         height: auto;
-        width: 80%;
+        width: 80%; 
         position: absolute;
         top: 0;
         bottom: 0;

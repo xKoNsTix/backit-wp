@@ -19,7 +19,7 @@
   cursor: pointer;
   border-color: #ffffff;
   border: 0px solid rgb(255, 255, 255);
-  background-color: #40bf75;
+  background-color: $color-main;
   color: white;
   font-size: 25px;
   letter-spacing: 6px;
@@ -59,7 +59,7 @@
 }
 
 .buttonShopArea {
-  padding-top: 10%;
+
   align-items: center;
   animation: hover 6s;
   animation-iteration-count: infinite;
@@ -80,12 +80,12 @@
 
 .buttonShop {
   font-family: "Outfit";
-  font-size: 36px;
+  font-size: 35px;
   font-weight: 800;
 
   border-radius: 8px;
   color: white;
-  padding: 10px 40px;
+  padding: 30px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -93,15 +93,16 @@
   cursor: pointer;
   border-color: #ffffff;
   border: 0px solid rgb(255, 255, 255);
-  background-color: #40bf75;
+  background-color: $color-main;
   color: white;
-  font-size: 25px;
+
   letter-spacing: 6px;
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   margin-top: 4vh;
+
 
   @media (max-width: 600px) {
     position: absolute;
@@ -153,7 +154,7 @@
       padding-top: 10px;
       padding-bottom: 10px;
       border-radius: 5px;
-      background-color: #40bf75;
+      background-color: $color-main;
       
     }
   }
@@ -163,7 +164,8 @@
     align-items: center;
     align-content: center;
     height: 50px;
-    margin-bottom:5%;
+    margin-bottom: 300px;
+    padding-top: -100px;
     .buttonShop {
       position: relative;
       top: 0vh;
@@ -174,9 +176,10 @@
       vertical-align: center;
       padding:10px;
       border-radius: 5px;
-      background-color: #40bf75;
+      background-color: $color-main;
       font-size: 20px;
       font-weight: 300;
+
       
       
     }

@@ -194,7 +194,7 @@ body {
   height: 4vh;
   min-height: 60px;
   font-family: "Outfit";
-  background-color: #40bf75;
+  background-color: #32955B;
 }
 @media (max-width: 900px) {
   .topSection {
@@ -285,13 +285,14 @@ body {
 .hero .leftArea {
   width: 100%;
   position: absolute;
-  margin-left: 2%;
+  margin-left: 7%;
   top: 25%;
   bottom: 50%;
 }
 @media (max-width: 900px) {
   .hero .leftArea {
     align-items: center;
+    margin-left: 0;
   }
 }
 .hero .leftArea img {
@@ -314,8 +315,8 @@ body {
 
 /** @format */
 .greenquote {
-  height: 50vh;
-  background-color: #40bf75;
+  height: 65vh;
+  background-color: #32955B;
   font-family: "Roboto";
   display: flex;
   flex-direction: column;
@@ -334,7 +335,7 @@ body {
 }
 .greenquote .sake h1 {
   text-align: top;
-  color: #161819;
+  color: #242529;
   margin-top: -1px !important;
   padding-top: -20px !important;
 }
@@ -406,7 +407,7 @@ body {
   flex-direction: column;
 }
 .overviews h2 {
-  font-size: 50px;
+  font-size: 48px;
   margin-bottom: 30px;
   max-width: 1000px;
   font-weight: 500;
@@ -417,7 +418,7 @@ body {
   }
 }
 .overviews p {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 36px;
   max-width: 475px;
 }
@@ -483,7 +484,7 @@ body {
 }
 .second .right .emoji {
   position: absolute;
-  bottom: 0;
+  bottom: -4.5px;
   right: 10%;
   width: 50px;
 }
@@ -760,7 +761,7 @@ body {
   cursor: pointer;
   border-color: #ffffff;
   border: 0px solid rgb(255, 255, 255);
-  background-color: #40bf75;
+  background-color: #32955B;
   color: white;
   font-size: 25px;
   letter-spacing: 6px;
@@ -801,7 +802,6 @@ body {
 }
 
 .buttonShopArea {
-  padding-top: 10%;
   align-items: center;
   animation: hover 6s;
   animation-iteration-count: infinite;
@@ -820,11 +820,11 @@ body {
 
 .buttonShop {
   font-family: "Outfit";
-  font-size: 36px;
+  font-size: 35px;
   font-weight: 800;
   border-radius: 8px;
   color: white;
-  padding: 10px 40px;
+  padding: 30px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -832,9 +832,8 @@ body {
   cursor: pointer;
   border-color: #ffffff;
   border: 0px solid rgb(255, 255, 255);
-  background-color: #40bf75;
+  background-color: #32955B;
   color: white;
-  font-size: 25px;
   letter-spacing: 6px;
   animation-name: floating;
   animation-duration: 3s;
@@ -892,14 +891,15 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
-    background-color: #40bf75;
+    background-color: #32955B;
   }
   .buttonShopArea {
     vertical-align: center;
     align-items: center;
     align-content: center;
     height: 50px;
-    margin-bottom: 5%;
+    margin-bottom: 300px;
+    padding-top: -100px;
   }
   .buttonShopArea .buttonShop {
     position: relative;
@@ -909,7 +909,7 @@ body {
     vertical-align: center;
     padding: 10px;
     border-radius: 5px;
-    background-color: #40bf75;
+    background-color: #32955B;
     font-size: 20px;
     font-weight: 300;
   }
@@ -1072,7 +1072,7 @@ body {
   min-height: 200px;
   display: flex;
   flex-direction: row;
-  background-color: #40bf75;
+  background-color: #32955B;
 }
 .contact .left {
   width: 33.33%;
@@ -1153,7 +1153,7 @@ body {
     min-height: 200px;
     display: flex;
     flex-direction: row-reverse;
-    background-color: #40bf75;
+    background-color: #32955B;
   }
   .contact .left {
     width: 40%;
@@ -1320,7 +1320,7 @@ footer .right .spanright a {
   z-index: 10000;
 }
 .menu body {
-  background: #40bf75;
+  background: #32955B;
 }
 .menu .container {
   position: absolute;
@@ -1338,7 +1338,7 @@ footer .right .spanright a {
   display: inline-block;
   position: relative;
   text-align: center;
-  color: #40bf75;
+  color: #32955B;
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
@@ -1348,7 +1348,7 @@ footer .right .spanright a {
 .menu .container a:after {
   content: "";
   position: absolute;
-  background: #40bf75;
+  background: #32955B;
   height: 2px;
   width: 0%;
   transform: translateX(-50%);
@@ -1392,7 +1392,7 @@ footer .right .spanright a {
   z-index: 10000;
 }
 .menu .button_container.active a .menu body {
-  background: #40bf75;
+  background: #32955B;
 }
 .menu .button_container.active a .menu .container {
   position: absolute;
@@ -1410,7 +1410,7 @@ footer .right .spanright a {
   display: inline-block;
   position: relative;
   text-align: center;
-  color: #40bf75;
+  color: #32955B;
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
@@ -1420,7 +1420,7 @@ footer .right .spanright a {
 .menu .button_container.active a .menu .container a:after {
   content: "";
   position: absolute;
-  background: #40bf75;
+  background: #32955B;
   height: 2px;
   width: 0%;
   transform: translateX(-50%);
@@ -1463,7 +1463,7 @@ footer .right .spanright a {
   background: #dcc2b3;
 }
 .menu .button_container.active a .menu .button_container span {
-  background: #40bf75;
+  background: #32955B;
   border: none;
   height: 5px;
   width: 100%;
@@ -1493,7 +1493,7 @@ footer .right .spanright a {
 }
 .menu .button_container.active a .menu .overlay:before {
   content: "";
-  background: #40bf75;
+  background: #32955B;
   left: -55%;
   top: 0;
   width: 50%;
@@ -1503,7 +1503,7 @@ footer .right .spanright a {
 }
 .menu .button_container.active a .menu .overlay:after {
   content: "";
-  background: #40bf75;
+  background: #32955B;
   right: -55%;
   top: 0;
   width: 50%;
@@ -1603,7 +1603,7 @@ footer .right .spanright a {
 }
 @media (max-width: 900px) {
   .menu .button_container span {
-    background: #40bf75;
+    background: #32955B;
     border: none;
     height: 6px;
     width: 100%;
@@ -1634,7 +1634,7 @@ footer .right .spanright a {
 }
 .menu .overlay:before {
   content: "";
-  background: #40bf75;
+  background: #32955B;
   left: -55%;
   top: 0;
   width: 50%;
@@ -1644,7 +1644,7 @@ footer .right .spanright a {
 }
 .menu .overlay:after {
   content: "";
-  background: #40bf75;
+  background: #32955B;
   right: -55%;
   top: 0;
   width: 50%;
@@ -1862,10 +1862,12 @@ footer .right .spanright a {
   font-weight: 300;
 }
 .shopMain h1 {
-  font-size: 40px;
+  font-size: 50px;
+  margin-bottom: 110px;
 }
 .shopMain h2 {
   font-size: 36px;
+  margin-bottom: -1%;
 }
 .shopMain p {
   font-size: 30px;
