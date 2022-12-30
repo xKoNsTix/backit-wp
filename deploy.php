@@ -2,7 +2,7 @@
 namespace Deployer;
 require 'recipe/common.php';
 
-set('repository','git@github.com:xKoNsTix/backit.git');
+set('repository','git@github.com:xKoNsTix/backit-wp.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 //set('git_tty', true);
@@ -14,17 +14,6 @@ set('repository','git@github.com:xKoNsTix/backit.git');
 set('shared_files', ['public/wp-config.php', 'public/.htaccess']);
 set('shared_dirs', ['public/wp-content/uploads']);
 set('keep_releases', 3);
-
-// AFTER WP
-
-#set('shared_files', ['public/index.html', 'public/.htaccess']);
-#set('shared_dirs', ['public/wp-content/uploads']);
-
-// Writable dirs by web server
-// set('writable_mode', 'chown');
-// set('writable_dirs', ['public/wp-content/uploads']);
-//set('allow_anonymous_stats', false);
-
 
 
 // Hosts
@@ -60,4 +49,11 @@ task('delete_src_folder', function () {
 
 // [Optional] If deploy fails automatically unlock.
 after('deploy', 'delete_src_folder');
+
 after('deploy:failed', 'deploy:unlock');
+
+
+
+
+
+
