@@ -123,7 +123,7 @@ Since it is dangerous to go alone, take this kitten:
   <section class="quotes">
     <div class="greenquote">
       <div class="sake">
-        <h1 class=>1FOR BACK'S SAKE!</h1>
+        <h1 class=>FOR BACK'S SAKE!</h1>
 
       </div>
       <div class="zeit">
