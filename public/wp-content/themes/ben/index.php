@@ -2,10 +2,11 @@
 <html lang="de">
 
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Thank your for being interested into the inner values of this homepage. If you want to contact the developer of this homepage you can do so here: tokowa.at  
+
+  <!-- Thank your for being interested into the inner values of this homepage. If you want to contact the developer of this homepage you can do so here: tokowa.at  
 Since it is dangerous to go alone, take this kitten:
 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -44,8 +45,8 @@ Since it is dangerous to go alone, take this kitten:
 ~ Konsti K.  -->
 
 
-  
-  <title>Ben Bäckt</title>
+
+  <title><?php get_the_title();?></title>
 
   <link rel="icon" href="/favicon_package_v0.16" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
@@ -55,7 +56,7 @@ Since it is dangerous to go alone, take this kitten:
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  
+
   <?php wp_head(); ?>
 </head>
 
@@ -67,6 +68,7 @@ Since it is dangerous to go alone, take this kitten:
     var templateDirectoryUri = '<?php echo get_template_directory_uri(); ?>';
   </script>
   <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
 
 
   <div id="home"></div>
@@ -111,7 +113,7 @@ Since it is dangerous to go alone, take this kitten:
       <div class="leftArea">
 
         <img src="<?php echo get_template_directory_uri(); ?>/images/logohero_mobile.png" alt="Placeholder">
-        
+
       </div>
 
       <div class="rightArea">
@@ -142,14 +144,33 @@ Since it is dangerous to go alone, take this kitten:
     <div class="first">
       <div class="left">
         <div class="textcontainer">
-          <h2> COME AND JOIN US!</h2>
+          <?php
+
+
+          // The Query
+          $gridFirstText = new WP_Query(array('p' => 7));
+
+          // The Loop
+          if ($gridFirstText->have_posts()) :
+            while ($gridFirstText->have_posts()) : $gridFirstText->the_post(); ?>
+
+              <h2> <?php the_title(); ?> </h2>
+              <p><?php the_content(); ?>
+              <p>
+
+              <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+
+
+            <!-- <h2> COME AND JOIN US!</h2>
           <p>
             Hofer Backbox? Was ist das denn? Genervt vom letschaten Sackerl Semmerl? Dann komm zu uns ins Cafe und
             genieß’
             authentische Salzburger Dampf-Semmerl. Frisch gebacken schmeckts doch am besten! Oder #gönndir ein
             Croissant,
             das geht immer!
-          </p>
+          </p> -->
         </div>
       </div>
 
