@@ -16,5 +16,7 @@ function load_styles_and_scripts()
     wp_localize_script('my-theme-main', 'themeData', $data);
 }
 
+function cc_mime_types($mimes){$mimes['svg']= 'images/svg+xml'; return $mimes;} //svg functionality
 add_action('wp_enqueue_scripts', 'load_styles_and_scripts');
+add_theme_support('post-thumbnails'); //post thumbnails
 ?>
