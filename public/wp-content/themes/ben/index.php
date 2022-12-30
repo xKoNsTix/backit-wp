@@ -258,7 +258,7 @@ Since it is dangerous to go alone, take this kitten:
 
           <p>Ben Müller</p>
           <a href="tel:+43 662 236 222 57"> 0662 236 222 57 </a><br>
-          <a href="mailto:beschwerden@backit.com">ben@backit.com</a><br>
+          <a href="mailto:beschwerden@backit.com">ben@backit.com</a><br><br>
           <a href="http://maps.google.com/?q=1200 Getreidegasse1, 5020 Salzburg" target="_blank" rel="noopener noreferrer">Getreidegasse1,<br> 5020 Salzburg</a>
 
         </div>

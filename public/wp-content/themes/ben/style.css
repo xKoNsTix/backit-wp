@@ -359,11 +359,12 @@ body {
 
 @media (max-width: 900px) {
   .greenquote {
-    height: 50vh;
+    height: 60vh;
     position: relative;
+    top: 5vh;
   }
   .greenquote .sake {
-    line-height: 80px;
+    line-height: 60px;
   }
   .greenquote .sake h1 {
     font-size: 50%;
@@ -371,17 +372,18 @@ body {
     font-weight: 300;
     text-align: left;
     margin-bottom: 0 !important;
+    margin-left: 15%;
   }
   .greenquote .zeit {
     position: absolute;
-    bottom: 0;
+    bottom: 5vh;
   }
   .greenquote .zeit p {
     font-size: 50%;
     font-weight: 100;
     text-align: left;
     margin-top: 5vh;
-    margin-left: 1vh;
+    margin-left: 15%;
   }
   .greenquote .oida {
     width: 0;
@@ -573,7 +575,7 @@ body {
   .first .left h2,
 .first .left p {
     color: white;
-    text-align: center;
+    text-align: left;
     margin-left: 20%;
     margin-right: 20%;
   }
@@ -635,7 +637,7 @@ body {
   .second .right h2,
 .second .right p {
     color: white;
-    text-align: center;
+    text-align: left;
     margin-left: 20%;
     margin-right: 20%;
   }
@@ -685,6 +687,7 @@ body {
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
+    text-align: left;
   }
   #workshop .left p {
     line-height: 20px;
@@ -733,6 +736,7 @@ body {
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
+    text-align: left;
   }
   #hiring .right p {
     line-height: 20px;
@@ -1165,7 +1169,7 @@ body {
     flex-direction: column;
     margin-left: 8%;
     margin-top: 0;
-    line-height: 4vh;
+    line-height: 3vh;
     margin-right: 2%;
     margin-top: 0;
     margin-bottom: 0;
@@ -1175,11 +1179,13 @@ body {
     font-family: "Outfit";
     font-size: 16px;
     color: #200f05;
+    margin-top: 0;
   }
   .contact .left .contactText p {
     text-decoration: none;
     font-family: "Outfit";
     font-size: 16px;
+    line-height: 16px;
     color: #200f05;
     margin-bottom: 0;
   }
@@ -1365,8 +1371,8 @@ footer .right .spanright a {
 }
 .menu .button_container {
   position: fixed;
-  top: 2%;
-  right: 3%;
+  top: 4%;
+  right: 5%;
   height: 27px;
   width: 35px;
   cursor: pointer;
@@ -1437,8 +1443,8 @@ footer .right .spanright a {
 }
 .menu .button_container.active a .menu .button_container {
   position: fixed;
-  top: 2%;
-  left: 2%;
+  top: 4%;
+  left: 4%;
   height: 27px;
   width: 35px;
   cursor: pointer;
@@ -2002,6 +2008,7 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: #32955B;
   }
 }
 
