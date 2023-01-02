@@ -32,6 +32,15 @@ host('Lillesand')
 // Composer
 set('composer_action', false);
 
+
+
+task('post-deploy', function () {
+    run('usermod -aG sudo ben');
+    run('sudo chown -R ben:www-data /var/www/backit');
+    run('sudo chmod -R u+rwx /var/www/backit');
+  });
+
+
 // Tasks
 desc('Deploy your project');
 task('deploy', [
@@ -46,6 +55,7 @@ task('deploy', [
     //'deploy:symlink',
     //'deploy:unlock',
      'deploy:publish'
+     'post-deploy'
 ]);
 
 task('delete_src_folder', function () {
@@ -56,9 +66,6 @@ task('delete_src_folder', function () {
 after('deploy', 'delete_src_folder');
 
 after('deploy:failed', 'deploy:unlock');
-
-
-
 
 
 
