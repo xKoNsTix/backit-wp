@@ -95,7 +95,7 @@ Since it is dangerous to go alone, take this kitten:
   <section class="topSection">
     <div class="text">
       <div class="topLeft">
-        <p> BEN MÜLLER</p>
+        <p> BEN MÜLLER "smoky"</p>
       </div>
 
       <div class="topRight">
