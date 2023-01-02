@@ -246,8 +246,10 @@ Since it is dangerous to go alone, take this kitten:
         </div>
       </div>
     </div>
-    <div id="workshop">
-
+    <div id="workshop"> 
+      
+    <!-- test -->
+    
       <div class="left">
         <div class="textcontainer">
           <h2> <br>RUNDE SEMMERL</h2>
