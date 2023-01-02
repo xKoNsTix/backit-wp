@@ -138,8 +138,9 @@ Since it is dangerous to go alone, take this kitten:
         $post = get_page_by_path('hero-logo', OBJECT, 'post');
         $thumbnail_id = get_post_thumbnail_id($post->ID);
         $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         ?>
-        <img src="<?php echo $thumbnail_url?>" alt="Placeholder">
+        <img src="<?php echo $thumbnail_url?>" alt=" <?php echo $alt_text ?>">
 
       </div>
 
@@ -183,6 +184,12 @@ Since it is dangerous to go alone, take this kitten:
           <?php
 
 
+// grid is like:
+// |aa|ab|
+// |ba|bb|
+// |ca|cb|
+// |da|db|
+
           // The Query
           $gridFirstText = new WP_Query(array('name' => 'grid-aa')); // name for the
 
@@ -197,16 +204,6 @@ Since it is dangerous to go alone, take this kitten:
               <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
-
-
-            <!-- <h2> COME AND JOIN US!</h2>
-          <p>
-            Hofer Backbox? Was ist das denn? Genervt vom letschaten Sackerl Semmerl? Dann komm zu uns ins Cafe und
-            genieß’
-            authentische Salzburger Dampf-Semmerl. Frisch gebacken schmeckts doch am besten! Oder #gönndir ein
-            Croissant,
-            das geht immer!
-          </p> -->
         </div>
       </div>
 
@@ -216,39 +213,52 @@ Since it is dangerous to go alone, take this kitten:
         $post = get_page_by_path('grid-pos-ab-first-image', OBJECT, 'post');
         $thumbnail_id = get_post_thumbnail_id($post->ID);
         $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         ?>
-        <img src="<?php echo $thumbnail_url; ?>" alt="fresh baked croissant">
+        <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text?>">
 
       </div>
 
     </div>
     <div class="second">
       <div class="left">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/mac.jpg" alt="macbook and coffee, working in cafe">
+      <?php
+        $post = get_page_by_path('grid-pos-ba-second-image', OBJECT, 'post');
+        $thumbnail_id = get_post_thumbnail_id($post->ID);
+        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        ?>
+        <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text?>">
       </div>
       <div class="right">
         <div class="textcontainer">
-          <h2> DEVELOPER'S HEAVEN</h2>
-          <p>
-            No Windows? No Cry. Bei uns bringen Fenster nur den Altstadt-Flair ins Lokal. <br>
 
-            Für jeden Mac User gibts 1 Eur Rabatt bei deinem Lieblings-Kaffee.
-            Immerhin hast du schon genug Geld ausgegeben. 100% erneuerbaren Strom gibts bei uns natürlich als Gast
-            natürlich gratis!
+
+        <?php
+        $post = get_page_by_path('grid-bb', OBJECT, 'post');
+        $thumbnail_id = get_post_thumbnail_id($post->ID);
+        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        $custom_field = get_post_meta($post_id, 'Hashtag', true);?>
+
+
+          <h2> <?php echo the_title() ; ?></h2>
+          <p>
+            <?php echo the_content();?>
             <br>
             <br>
-            #AWESOME
+            <?php echo $custom_field?>
           </p>
         </div>
 
         <div class="emoji">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/emoji.png" alt="Robo Emoji which Johannes will like, i think">
+          <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text?>">
         </div>
       </div>
     </div>
     <div id="workshop"> 
       
-    <!-- test1 -->
+
     
       <div class="left">
         <div class="textcontainer">
