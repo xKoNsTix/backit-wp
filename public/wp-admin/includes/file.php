@@ -67,7 +67,7 @@ $wp_file_descriptions = array(
 
 /**
  * Gets the description for standard WordPress theme files.
- *
+ 
  * @since 1.5.0
  *
  * @global array $wp_file_descriptions Theme file descriptions.

@@ -46,7 +46,7 @@ Since it is dangerous to go alone, take this kitten:
 
 
 
-  <title><?php get_the_title();?></title>
+  <title><?php get_the_title(); ?></title>
 
   <link rel="icon" href="/favicon_package_v0.16" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
@@ -95,7 +95,24 @@ Since it is dangerous to go alone, take this kitten:
   <section class="topSection">
     <div class="text">
       <div class="topLeft">
-        <p> BEN MÜLLER "smoky"</p>
+        <?php
+        $gridFirstText = new WP_Query(array('name' => 'name-links-oben')); // name for the slug
+
+        // The Loop
+        if ($gridFirstText->have_posts()) :
+          while ($gridFirstText->have_posts()) : $gridFirstText->the_post(); ?>
+            <a href="/public/index.php" style="text-decoration: none;">
+              <p><?php the_content(); ?>
+                <p>
+            </a>
+
+          <?php endwhile; ?>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
+
+
+
+
       </div>
 
       <div class="topRight">
@@ -125,17 +142,26 @@ Since it is dangerous to go alone, take this kitten:
   <section class="quotes">
     <div class="greenquote">
       <div class="sake">
-        <h1 class=>FOR BACK'S SAKE!</h1>
+        <?php
+        $heroText = new WP_Query(array('name' => 'hero-text')); // name for the slug 
+        if ($heroText->have_posts()) :
+          while ($heroText->have_posts()) : $heroText->the_post(); ?>
+            <h1 class><?php the_title(); ?></h1>
 
       </div>
       <div class="zeit">
-        <p> "Es wird endlich Zeit für 'gscheite Weckerl!"</p>
+        <p> <?php the_content(); ?></p>
       </div>
       <div class="oida">
         <br>
-        <p>(Oida)</p>
+        <?php
+            $post_id = $heroText->post->ID;
+            $custom_field = get_post_meta($post_id, 'oida', true); ?>
+        <p> <?php echo $custom_field ?> </p>
       </div>
-
+    <?php endwhile; ?>
+  <?php endif; ?>
+  <?php wp_reset_postdata(); ?>
     </div>
 
     </div>
@@ -148,7 +174,7 @@ Since it is dangerous to go alone, take this kitten:
 
 
           // The Query
-          $gridFirstText = new WP_Query(array('p' => 7));
+          $gridFirstText = new WP_Query(array('name' => 'grid-aa')); // name for the
 
           // The Loop
           if ($gridFirstText->have_posts()) :
