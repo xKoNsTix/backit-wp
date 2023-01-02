@@ -40,3 +40,10 @@
      ?>
 
 
+<!-- GET THUMBNAIL  -->
+
+<?php
+  $post = get_page_by_path('grid-pos-ab-first-image', OBJECT, 'post');
+  $thumbnail_id = get_post_thumbnail_id($post->ID);
+  $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+?>

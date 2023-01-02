@@ -269,7 +269,6 @@ body {
 }
 
 .hero {
-  background-image: url("images/heroblur.jpg");
   background-size: cover;
   height: 95vh;
   width: 100%;

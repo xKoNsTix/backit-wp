@@ -125,7 +125,12 @@ Since it is dangerous to go alone, take this kitten:
     </div>
   </section>
   <div class="topLine"></div>
-  <section class="hero">
+  <?php
+        $post = get_page_by_path('hero-photo', OBJECT, 'post');
+        $thumbnail_id = get_post_thumbnail_id($post->ID);
+        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        ?>
+  <section class="hero" style="background-image:<?php echo $thumbnail_url;?>">
     <div class="heroimage">
       <div class="leftArea">
 
@@ -201,7 +206,13 @@ Since it is dangerous to go alone, take this kitten:
       </div>
 
       <div class="right">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/croissant.jpg" alt="fresh baked croissant">
+
+        <?php
+        $post = get_page_by_path('grid-pos-ab-first-image', OBJECT, 'post');
+        $thumbnail_id = get_post_thumbnail_id($post->ID);
+        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        ?>
+        <img src="<?php echo $thumbnail_url; ?>" alt="fresh baked croissant">
 
       </div>
 
