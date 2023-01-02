@@ -240,7 +240,7 @@ Since it is dangerous to go alone, take this kitten:
         $thumbnail_url = wp_get_attachment_url($thumbnail_id);
         $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         $custom_field = get_post_meta($post_id, 'Hashtag', true);?>
-<!-- test -->
+
 
           <h2> <?php echo the_title() ; ?></h2>
           <p>
