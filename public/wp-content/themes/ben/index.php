@@ -130,11 +130,16 @@ Since it is dangerous to go alone, take this kitten:
         $thumbnail_id = get_post_thumbnail_id($post->ID);
         $thumbnail_url = wp_get_attachment_url($thumbnail_id);
         ?>
-  <section class="hero" style="background-image:<?php echo $thumbnail_url;?>">
+  <section class="hero" style="background-image:url(<?php echo $thumbnail_url?>)">
     <div class="heroimage">
       <div class="leftArea">
 
-        <img src="<?php echo get_template_directory_uri(); ?>/images/logohero_mobile.png" alt="Placeholder">
+      <?php
+        $post = get_page_by_path('hero-logo', OBJECT, 'post');
+        $thumbnail_id = get_post_thumbnail_id($post->ID);
+        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        ?>
+        <img src="<?php echo $thumbnail_url?>" alt="Placeholder">
 
       </div>
 

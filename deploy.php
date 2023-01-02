@@ -35,7 +35,7 @@ set('composer_action', false);
 
 
 task('post-deploy', function () {
-    run('usermod -aG sudo ben');
+    
     run('sudo chown -R ben:www-data /var/www/backit');
     run('sudo chmod -R u+rwx /var/www/backit');
   });
@@ -54,8 +54,9 @@ task('deploy', [
     //'deploy:clear_paths',
     //'deploy:symlink',
     //'deploy:unlock',
-     'deploy:publish'
-     'post-deploy'
+    'post-deploy',
+    'deploy:publish'
+     
 ]);
 
 task('delete_src_folder', function () {

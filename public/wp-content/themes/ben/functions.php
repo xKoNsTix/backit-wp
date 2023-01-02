@@ -16,7 +16,15 @@ function load_styles_and_scripts()
     wp_localize_script('my-theme-main', 'themeData', $data);
 }
 
-function cc_mime_types($mimes){$mimes['svg']= 'images/svg+xml'; return $mimes;} //svg functionality
+function add_svg_support() { //svg functionality
+    function svg_mime_type( $mimes ) {
+      $mimes['svg'] = 'image/svg+xml';
+      return $mimes;
+    }
+    add_filter( 'upload_mimes', 'svg_mime_type' );
+  }
+  add_action( 'after_setup_theme', 'add_svg_support' );
+   
 add_action('wp_enqueue_scripts', 'load_styles_and_scripts');
 add_theme_support('post-thumbnails'); //post thumbnails
 ?>
