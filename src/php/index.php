@@ -7,63 +7,11 @@
   <script>
     var templateDirectoryUri = '<?php echo get_template_directory_uri(); ?>';
   </script>
-  <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 
 
-  <div id="home"></div>
-  <div class="menu">
-
-    <div class="button_container" id="toggle">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </div>
-
-    <div class="overlay" id="overlay">
-      <nav class="overlay-menu">
-        <ul>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/about.php">About</a></li>
-          <li><a href="#workshop">Workshops</a></li>
-          <li><a href="#hiring">Jobs</a></li>
-          <li><a href="#shopArea">Shop</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-
-  <section class="topSection">
-    <div class="text">
-      <div class="topLeft">
-        <?php
-        $shop = new WP_Query(array('name' => 'name-links-oben')); // name for the slug
-
-        // The Loop
-        if ($shop->have_posts()) :
-          while ($shop->have_posts()) : $shop->the_post(); ?>
-            <a href="/public/index.php" style="text-decoration: none;">
-              <p><?php the_content(); ?>
-                <p>
-            </a>
-
-          <?php endwhile; ?>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
-
-
-
-
-      </div>
-
-      <div class="topRight">
-        <a href="<?php echo get_template_directory_uri(); ?>/about.php">ABOUT</a>
-
-        <a href="#workshop">WORKSHOPS</a>
-        <a href="#hiring">JOBS</a>
-        <a href="#shopArea">SHOP</a>
-      </div>
-    </div>
-  </section>
+  
   <div class="topLine"></div>
   <?php
   $post = get_page_by_path('hero-photo', OBJECT, 'post');
@@ -321,7 +269,7 @@
               <?php $post_id = $shop->post->ID;
               $custom_field = get_post_meta($post_id, 'ShopButton', true); ?>
               <div class="buttonShopArea">
-                <a class="buttonShop" href="<?php echo get_template_directory_uri(); ?>/shop.php"><?php echo $custom_field ?> </a>
+                <a class="buttonShop" href="<?php echo get_template_directory_uri(); ?>/page-shop.php"><?php echo $custom_field ?> </a>
               </div>
 
             <?php endwhile; ?>
