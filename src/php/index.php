@@ -398,6 +398,19 @@ Since it is dangerous to go alone, take this kitten:
     </div>
 
     </div>
+
+    <div class="contactFormular">
+    <div class="contactWrapper">
+      
+      <!-- contact form by Batuhan Baş, teşekkür ederim! -->
+      <?php
+      $form = wpcf7_contact_form(74); // Replace 1 with the ID of the contact form
+      echo $form->form;
+
+
+      ?>
+    </div>
+  </div>
     <div class="contact">
       <div class="left">
         <div class="contactText">
@@ -457,7 +470,7 @@ Since it is dangerous to go alone, take this kitten:
 
     </div>
   </section>
-
+  
   <footer>
     <div class="left">
       <p> © 2023 BenBäckt Industries</p>
