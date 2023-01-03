@@ -901,8 +901,8 @@ body {
   }
   .buttonShopArea {
     vertical-align: center;
-    align-items: center;
-    align-content: center;
+    align-items: left;
+    align-content: left;
     height: 50px;
     margin-bottom: 300px;
     padding-top: -100px;
@@ -949,7 +949,11 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+@media (min-width: 900px) {
+  #shopArea .midDiv .textcontainer {
+    align-items: center;
+  }
 }
 #shopArea .midDiv .textcontainer h2 {
   font-size: 50px;
@@ -1021,7 +1025,7 @@ body {
     height: 70v;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     margin-left: 1%;
     z-index: 999;
   }
@@ -1030,7 +1034,7 @@ body {
     flex-direction: column;
     font-family: "Outfit";
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding-left: 60px;
     margin-top: -1px;
     width: 100%;

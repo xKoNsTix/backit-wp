@@ -165,11 +165,12 @@
   .buttonShopArea {
     vertical-align: center;
 
-    align-items: center;
-    align-content: center;
+    align-items: left;
+    align-content: left;
     height: 50px;
     margin-bottom: 300px;
     padding-top: -100px;
+
     .buttonShop {
       position: relative;
       top: 0vh;
