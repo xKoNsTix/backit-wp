@@ -38,6 +38,7 @@ body {
 
 body {
   overflow-x: hidden;
+
 }
 
 @media (max-width: 900px) {
@@ -49,5 +50,8 @@ body {
       padding: 0px;
       overflow-x: hidden; 
       background-color: $color-main;
+      
   }
 }
+
+

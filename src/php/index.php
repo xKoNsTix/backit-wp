@@ -241,15 +241,27 @@ Since it is dangerous to go alone, take this kitten:
 
           if ($shop->have_posts()) :
             while ($shop->have_posts()) : $shop->the_post();
-                $post_id = $shop->post->ID;
-                $custom_field = get_post_meta($post_id, 'Hashtag', true); ?>
+              $post_id = $shop->post->ID;
+              $custom_field = get_post_meta($post_id, 'Hashtag', true); ?>
               <h2> <?php the_title(); ?> </h2>
-              <p><?php the_content(); 
-              echo "<p style='color:white;'>" . $custom_field . "</p>";
+              <p><?php the_content();
+                  echo "<style>
+                  @media(min-width:900px){
+                    p {
+                      color: black;
+                    }
+                  }
+                  @media(max-width:899px){
+                    p {
+                      color: white;
+                    }
+                  }
+                </style>
+                <p>" . $custom_field . "</p>";
 
-              ?>
+                  ?>
 
-                
+
 
 
 
@@ -305,45 +317,45 @@ Since it is dangerous to go alone, take this kitten:
           </div>
 
     </div>
-    <div id="hiring" >
-   <?php $fourthPhoto = get_page_by_path('grid-da-fourth-photo', OBJECT, 'post');
-            $thumbnail_id = get_post_thumbnail_id($fourthPhoto->ID);
-            $thumbnail_url = wp_get_attachment_url($thumbnail_id);
-            $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
+    <div id="hiring">
+      <?php $fourthPhoto = get_page_by_path('grid-da-fourth-photo', OBJECT, 'post');
+      $thumbnail_id = get_post_thumbnail_id($fourthPhoto->ID);
+      $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+      $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
       <div class="left" style="background-image:url(<?php echo  $thumbnail_url ?>">
-      <?php wp_reset_postdata(); ?>
-      <?php
-            $hiringFont = get_page_by_path('hiring-font', OBJECT, 'post');
-            $thumbnail_id = get_post_thumbnail_id($hiringFont->ID);
-            $thumbnail_url = wp_get_attachment_url($thumbnail_id);
-            $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
+        <?php wp_reset_postdata(); ?>
+        <?php
+        $hiringFont = get_page_by_path('hiring-font', OBJECT, 'post');
+        $thumbnail_id = get_post_thumbnail_id($hiringFont->ID);
+        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
 
-            <img src="<?php echo $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
-            <?php wp_reset_postdata(); ?>
+        <img src="<?php echo $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
+        <?php wp_reset_postdata(); ?>
       </div>
       <div class="right">
         <div class="textcontainer">
-    <?php    $shop = new WP_Query(array('name' => 'grid-cb'));
-      if ($shop->have_posts()) :
-        while ($shop->have_posts()) : $shop->the_post(); ?>
+          <?php $shop = new WP_Query(array('name' => 'grid-cb'));
+          if ($shop->have_posts()) :
+            while ($shop->have_posts()) : $shop->the_post(); ?>
 
 
 
-          <h2><?php the_title()?> </h2>
-          <p>
-            <?php echo the_content()?>
-          </p>
+              <h2><?php the_title() ?> </h2>
+              <p>
+                <?php echo the_content() ?>
+              </p>
 
-          <div class="buttonDivApp">
-<?php
-          $post_id = $shop->post->ID;
-            $custom_field = get_post_meta($post_id, 'Button', true); ?>
-            <a class="buttonApplication" href="#Job"> <?php echo $custom_field?> </a>
+              <div class="buttonDivApp">
+                <?php
+                $post_id = $shop->post->ID;
+                $custom_field = get_post_meta($post_id, 'Button', true); ?>
+                <a class="buttonApplication" href="#Job"> <?php echo $custom_field ?> </a>
 
-            <?php endwhile; ?>
-      <?php endif; ?>
-      <?php wp_reset_postdata(); ?>
-          </div>
+              <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+              </div>
         </div>
       </div>
     </div>
@@ -358,23 +370,23 @@ Since it is dangerous to go alone, take this kitten:
       </div>
       <div class="midDiv">
         <div class="textcontainer">
-<?php
-        $shop = new WP_Query(array('name' => 'shop'));
-      if ($shop->have_posts()) :
-        while ($shop->have_posts()) : $shop->the_post(); ?>
-          <h2><?php the_title()?> </h2>
-          <p>
-            <?php the_content()?>
-          </p>
-          <?php $post_id = $shop->post->ID;
-            $custom_field = get_post_meta($post_id, 'ShopButton', true); ?>
-          <div class="buttonShopArea">
-            <a class="buttonShop" href="<?php echo get_template_directory_uri(); ?>/shop.php"><?php echo $custom_field?> </a>
-          </div>
+          <?php
+          $shop = new WP_Query(array('name' => 'shop'));
+          if ($shop->have_posts()) :
+            while ($shop->have_posts()) : $shop->the_post(); ?>
+              <h2><?php the_title() ?> </h2>
+              <p>
+                <?php the_content() ?>
+              </p>
+              <?php $post_id = $shop->post->ID;
+              $custom_field = get_post_meta($post_id, 'ShopButton', true); ?>
+              <div class="buttonShopArea">
+                <a class="buttonShop" href="<?php echo get_template_directory_uri(); ?>/shop.php"><?php echo $custom_field ?> </a>
+              </div>
 
-          <?php endwhile; ?>
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
 
       </div>
@@ -389,36 +401,63 @@ Since it is dangerous to go alone, take this kitten:
     <div class="contact">
       <div class="left">
         <div class="contactText">
-
-          <p>Ben Müller</p>
-          <a href="tel:+43 662 236 222 57"> 0662 236 222 57 </a><br>
-          <a href="mailto:beschwerden@backit.com">ben@backit.com</a><br><br>
-          <a href="http://maps.google.com/?q=1200 Getreidegasse1, 5020 Salzburg" target="_blank" rel="noopener noreferrer">Getreidegasse1,<br> 5020 Salzburg</a>
-
+          <?php
+          $contact = new WP_Query(array('name' => 'contact'));
+          if ($contact->have_posts()) :
+            while ($contact->have_posts()) : $contact->the_post();
+              $post_id = $contact->post->ID;
+              $tel = get_post_meta($post_id, 'telephone', true);
+              $mail = get_post_meta($post_id, 'email', true);
+              $fullAdress = get_post_meta($post_id, 'fullAdress', true);
+              $postIDandCity = get_post_meta($post_id, 'postIDandCity', true);
+              $street = get_post_meta($post_id, 'street', true);
+              $name = get_post_meta($post_id, 'name', true);
+          ?>
+              <p><?php echo $name; ?></p>
+              <a href="tel:+43<?php echo $tel ?>"> <?php echo $tel ?> </a><br>
+              <a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a><br><br>
+              <a href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode($fullAddress); ?>" target="_blank" rel="noopener noreferrer"><?php echo $street ?>,<br> <?php echo $postIDandCity ?></a>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
       </div>
-
+      <?php
+      $post = get_page_by_path('contact', OBJECT, 'post');
+      $thumbnail_id = get_post_thumbnail_id($post->ID);
+      $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+      $alt_text = get_post_meta($post, '_wp_attachment_image_alt', true); ?>
       <div class="mid">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/benlogobrown.svg" alt="ich geh mci hackeln">
+        <img src="<?php echo  $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
+
 
       </div>
 
       <div class="right">
         <div class="contactText">
+          <?php
+          $contact = new WP_Query(array('name' => 'contact'));
+          if ($contact->have_posts()) :
+            while ($contact->have_posts()) : $contact->the_post();
+              $ImpressumLink = get_post_meta($post_id, 'ImpressumLink', true);
+              $ImpressumText = get_post_meta($post_id, 'ImpressumText', true);
+              $CopyRightText = get_post_meta($post_id, 'CopyrightText', true);
 
+          ?>
 
-
-          <a href="#">Impressum und Datenschutz</a>
-          <p>©2025 Tokowa</p>
-
+              <a href="<?php echo $ImpressumLink ?> "><?php echo $ImpressumText ?></a>
+              <p><?php echo $CopyRightText ?></p>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
 
       </div>
 
 
     </div>
-
   </section>
+
   <footer>
     <div class="left">
       <p> © 2023 BenBäckt Industries</p>
@@ -431,13 +470,13 @@ Since it is dangerous to go alone, take this kitten:
   </footer>
 
 
-
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript" scr="https://cdnjs.cloudflare.com/ajax/libs/animateCSS/1.2.2/jquery.animatecss.min.js"></script>
   <?php wp_footer(); ?>
+
+
 
 </body>
 

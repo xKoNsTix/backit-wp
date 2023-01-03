@@ -510,6 +510,9 @@ body {
   vertical-align: center;
   background-color: #e8d7ce;
 }
+#hiring .textcontainer .buttonDivApp {
+  margin-top: -5vh;
+}
 #hiring .right {
   width: 50%;
   height: 65vh;
@@ -552,14 +555,24 @@ body {
   }
   .first {
     display: flex;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     vertical-align: center;
     background-color: #dcc2b3;
   }
+  .first .textcontainer {
+    align-items: center;
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    padding-bottom: auto;
+    display: flex;
+    flex-direction: column;
+  }
   .first .left {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     align-items: center;
     align-content: space-around;
     padding-top: auto;
@@ -577,7 +590,6 @@ body {
     text-align: left;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 30px;
   }
   .first .left p {
     line-height: 20px;
@@ -922,7 +934,7 @@ body {
 }
 /** @format */
 #shopArea {
-  height: 70vh;
+  height: 80vh;
   font-family: "Outfit";
   background-color: #ae8e7c;
   display: flex;
@@ -933,7 +945,7 @@ body {
 #shopArea .midDiv {
   align-items: center;
   width: 50%;
-  height: 70v;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -994,7 +1006,7 @@ body {
   }
 }
 #shopArea img {
-  max-height: 70vh;
+  max-height: 80vh;
   z-index: 101;
   position: absolute;
   float: none;
@@ -1005,7 +1017,7 @@ body {
   margin-left: 0;
 }
 #shopArea .imageleft img {
-  max-height: 70vh;
+  max-height: 80vh;
 }
 
 @media (max-width: 900px) {
