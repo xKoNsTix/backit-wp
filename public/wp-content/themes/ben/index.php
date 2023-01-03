@@ -240,19 +240,18 @@ Since it is dangerous to go alone, take this kitten:
 
 
           if ($shop->have_posts()) :
-            while ($shop->have_posts()) : $shop->the_post(); ?>
-
-              <h2> <?php the_title(); ?> </h2>
-              <p><?php the_content(); ?>
-                <br>
-                <br>
-                <?php
-
-
+            while ($shop->have_posts()) : $shop->the_post();
                 $post_id = $shop->post->ID;
                 $custom_field = get_post_meta($post_id, 'Hashtag', true); ?>
-                <?php echo $custom_field ?>
-              </p>
+              <h2> <?php the_title(); ?> </h2>
+              <p><?php the_content(); 
+              echo "<p style='color:white;'>" . $custom_field . "</p>";
+
+              ?>
+
+                
+
+
 
 
 

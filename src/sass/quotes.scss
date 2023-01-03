@@ -201,13 +201,11 @@
         text-align: left;
         margin-left: 20%;
         margin-right: 20%;
-        
-        margin-top:30px;
-        
+
+        margin-top: 30px;
       }
       p {
         line-height: 20px;
-
       }
     }
 
@@ -279,7 +277,6 @@
         text-align: left;
         margin-left: 20%;
         margin-right: 20%;
-
       }
       p {
         line-height: 20px;
@@ -383,23 +380,27 @@
       position: relative;
       background-image: url("images/chalkboard.jpg");
       background-size: cover;
-      .textcontainer {
-        align-items: center;
-        align-content: center;
-        
-      }
+      
 
+     
       h2,
       p {
         color: white;
-        text-align: center;
+        text-align: left;
         margin-left: 20%;
         margin-right: 20%;
-        text-align: left;
+        align-items: inherit;
+        align-content: inherit;
+        
       }
+
       p {
         line-height: 20px;
+        
       }
+      
+      align-items: inherit;
+      align-content: inherit;
     }
 
     .left {

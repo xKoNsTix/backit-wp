@@ -725,18 +725,17 @@ body {
     position: relative;
     background-image: url("images/chalkboard.jpg");
     background-size: cover;
-  }
-  #hiring .right .textcontainer {
-    align-items: center;
-    align-content: center;
+    align-items: inherit;
+    align-content: inherit;
   }
   #hiring .right h2,
 #hiring .right p {
     color: white;
-    text-align: center;
+    text-align: left;
     margin-left: 20%;
     margin-right: 20%;
-    text-align: left;
+    align-items: inherit;
+    align-content: inherit;
   }
   #hiring .right p {
     line-height: 20px;
@@ -881,7 +880,10 @@ body {
     align-items: center;
     align-content: center;
     height: 100px;
+    width: 80vw;
     margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .buttonDivApp .buttonApplication {
     position: relative;
