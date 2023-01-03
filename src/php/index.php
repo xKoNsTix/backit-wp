@@ -96,11 +96,11 @@ Since it is dangerous to go alone, take this kitten:
     <div class="text">
       <div class="topLeft">
         <?php
-        $gridfourthText = new WP_Query(array('name' => 'name-links-oben')); // name for the slug
+        $shop = new WP_Query(array('name' => 'name-links-oben')); // name for the slug
 
         // The Loop
-        if ($gridfourthText->have_posts()) :
-          while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
+        if ($shop->have_posts()) :
+          while ($shop->have_posts()) : $shop->the_post(); ?>
             <a href="/public/index.php" style="text-decoration: none;">
               <p><?php the_content(); ?>
                 <p>
@@ -191,11 +191,11 @@ Since it is dangerous to go alone, take this kitten:
           // |da|db|
 
 
-          $gridfourthText = new WP_Query(array('name' => 'grid-aa')); // name for the
+          $shop = new WP_Query(array('name' => 'grid-aa')); // name for the
 
 
-          if ($gridfourthText->have_posts()) :
-            while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
+          if ($shop->have_posts()) :
+            while ($shop->have_posts()) : $shop->the_post(); ?>
 
               <h2> <?php the_title(); ?> </h2>
               <p><?php the_content(); ?>
@@ -236,11 +236,11 @@ Since it is dangerous to go alone, take this kitten:
 
           <?php
 
-          $gridfourthText = new WP_Query(array('name' => 'grid-bb')); // name for the
+          $shop = new WP_Query(array('name' => 'grid-bb')); // name for the
 
 
-          if ($gridfourthText->have_posts()) :
-            while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
+          if ($shop->have_posts()) :
+            while ($shop->have_posts()) : $shop->the_post(); ?>
 
               <h2> <?php the_title(); ?> </h2>
               <p><?php the_content(); ?>
@@ -249,7 +249,7 @@ Since it is dangerous to go alone, take this kitten:
                 <?php
 
 
-                $post_id = $gridfourthText->post->ID;
+                $post_id = $shop->post->ID;
                 $custom_field = get_post_meta($post_id, 'Hashtag', true); ?>
                 <?php echo $custom_field ?>
               </p>
@@ -261,7 +261,7 @@ Since it is dangerous to go alone, take this kitten:
         </div>
 
         <div class="emoji">
-          <?php $thumbnail_id = get_post_thumbnail_id($gridfourthText->ID);
+          <?php $thumbnail_id = get_post_thumbnail_id($shop->ID);
               $thumbnail_url = wp_get_attachment_url($thumbnail_id);
               $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
           <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text ?>">
@@ -274,9 +274,9 @@ Since it is dangerous to go alone, take this kitten:
     <div id="workshop">
 
       <?php
-      $gridfourthText = new WP_Query(array('name' => 'grid-ca'));
-      if ($gridfourthText->have_posts()) :
-        while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
+      $shop = new WP_Query(array('name' => 'grid-ca'));
+      if ($shop->have_posts()) :
+        while ($shop->have_posts()) : $shop->the_post(); ?>
 
 
 
@@ -324,20 +324,20 @@ Since it is dangerous to go alone, take this kitten:
       </div>
       <div class="right">
         <div class="textcontainer">
-    <?php    $gridfourthText = new WP_Query(array('name' => 'grid-cb'));
-      if ($gridfourthText->have_posts()) :
-        while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
+    <?php    $shop = new WP_Query(array('name' => 'grid-cb'));
+      if ($shop->have_posts()) :
+        while ($shop->have_posts()) : $shop->the_post(); ?>
 
 
 
           <h2><?php the_title()?> </h2>
           <p>
-            <?php the_content()?>
+            <?php echo the_content()?>
           </p>
 
           <div class="buttonDivApp">
 <?php
-          $post_id = $gridfourthText->post->ID;
+          $post_id = $shop->post->ID;
             $custom_field = get_post_meta($post_id, 'Button', true); ?>
             <a class="buttonApplication" href="#Job"> <?php echo $custom_field?> </a>
 
@@ -359,15 +359,23 @@ Since it is dangerous to go alone, take this kitten:
       </div>
       <div class="midDiv">
         <div class="textcontainer">
-          <h2>BEST BEN FOR YOUR BACK? </h2>
+<?php
+        $shop = new WP_Query(array('name' => 'shop'));
+      if ($shop->have_posts()) :
+        while ($shop->have_posts()) : $shop->the_post(); ?>
+          <h2><?php the_title()?> </h2>
           <p>
-            Geilen Merch gibts natürlich auch noch. Zeig dich jetzt in der Hood als Fan oder Ambassador von Bens
-            authentischen Backwaren.
+            <?php the_content()?>
           </p>
-
+          <?php $post_id = $shop->post->ID;
+            $custom_field = get_post_meta($post_id, 'ShopButton', true); ?>
           <div class="buttonShopArea">
-            <a class="buttonShop" href="<?php echo get_template_directory_uri(); ?>/shop.php"> SHOP NOW!</a>
+            <a class="buttonShop" href="<?php echo get_template_directory_uri(); ?>/shop.php"><?php echo $custom_field?> </a>
           </div>
+
+          <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
         </div>
 
       </div>

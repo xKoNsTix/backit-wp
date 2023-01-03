@@ -1,3 +1,5 @@
+<?php
+require_once( dirname( __FILE__ ) . '/../../../wp-blog-header.php' ); ?>
 <!DOCTYPE html>
 <html lang="de">
 
@@ -15,11 +17,11 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
 
-
+    <?php wp_head(); ?>
 </head>
 
 <body>
-
+<?php wp_body_open(); ?>
 
 
     <div id="home"></div>
