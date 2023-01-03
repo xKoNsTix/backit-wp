@@ -96,11 +96,11 @@ Since it is dangerous to go alone, take this kitten:
     <div class="text">
       <div class="topLeft">
         <?php
-        $gridFirstText = new WP_Query(array('name' => 'name-links-oben')); // name for the slug
+        $gridfourthText = new WP_Query(array('name' => 'name-links-oben')); // name for the slug
 
         // The Loop
-        if ($gridFirstText->have_posts()) :
-          while ($gridFirstText->have_posts()) : $gridFirstText->the_post(); ?>
+        if ($gridfourthText->have_posts()) :
+          while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
             <a href="/public/index.php" style="text-decoration: none;">
               <p><?php the_content(); ?>
                 <p>
@@ -126,21 +126,21 @@ Since it is dangerous to go alone, take this kitten:
   </section>
   <div class="topLine"></div>
   <?php
-        $post = get_page_by_path('hero-photo', OBJECT, 'post');
-        $thumbnail_id = get_post_thumbnail_id($post->ID);
-        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
-        ?>
-  <section class="hero" style="background-image:url(<?php echo $thumbnail_url?>)">
+  $post = get_page_by_path('hero-photo', OBJECT, 'post');
+  $thumbnail_id = get_post_thumbnail_id($post->ID);
+  $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+  ?>
+  <section class="hero" style="background-image:url(<?php echo $thumbnail_url ?>)">
     <div class="heroimage">
       <div class="leftArea">
 
-      <?php
+        <?php
         $post = get_page_by_path('hero-logo', OBJECT, 'post');
         $thumbnail_id = get_post_thumbnail_id($post->ID);
         $thumbnail_url = wp_get_attachment_url($thumbnail_id);
         $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         ?>
-        <img src="<?php echo $thumbnail_url?>" alt=" <?php echo $alt_text ?>">
+        <img src="<?php echo $thumbnail_url ?>" alt=" <?php echo $alt_text ?>">
 
       </div>
 
@@ -184,18 +184,18 @@ Since it is dangerous to go alone, take this kitten:
           <?php
 
 
-// grid is like:
-// |aa|ab|
-// |ba|bb|
-// |ca|cb|
-// |da|db|
+          // grid is like:
+          // |aa|ab|
+          // |ba|bb|
+          // |ca|cb|
+          // |da|db|
 
-          // The Query
-          $gridFirstText = new WP_Query(array('name' => 'grid-aa')); // name for the
 
-          // The Loop
-          if ($gridFirstText->have_posts()) :
-            while ($gridFirstText->have_posts()) : $gridFirstText->the_post(); ?>
+          $gridfourthText = new WP_Query(array('name' => 'grid-aa')); // name for the
+
+
+          if ($gridfourthText->have_posts()) :
+            while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
 
               <h2> <?php the_title(); ?> </h2>
               <p><?php the_content(); ?>
@@ -215,83 +215,135 @@ Since it is dangerous to go alone, take this kitten:
         $thumbnail_url = wp_get_attachment_url($thumbnail_id);
         $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         ?>
-        <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text?>">
+        <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text ?>">
 
       </div>
 
     </div>
     <div class="second">
       <div class="left">
-      <?php
+        <?php
         $post = get_page_by_path('grid-pos-ba-second-image', OBJECT, 'post');
         $thumbnail_id = get_post_thumbnail_id($post->ID);
         $thumbnail_url = wp_get_attachment_url($thumbnail_id);
         $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         ?>
-        <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text?>">
+        <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text ?>">
       </div>
       <div class="right">
         <div class="textcontainer">
 
 
-        <?php
-        $post = get_page_by_path('grid-bb', OBJECT, 'post');
-        $thumbnail_id = get_post_thumbnail_id($post->ID);
-        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
-        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-        $custom_field = get_post_meta($post_id, 'Hashtag', true);?>
+          <?php
+
+          $gridfourthText = new WP_Query(array('name' => 'grid-bb')); // name for the
 
 
-          <h2> <?php echo the_title() ; ?></h2>
-          <p>
-            <?php echo the_content();?>
-            <br>
-            <br>
-            <?php echo $custom_field?>
-          </p>
+          if ($gridfourthText->have_posts()) :
+            while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
+
+              <h2> <?php the_title(); ?> </h2>
+              <p><?php the_content(); ?>
+                <br>
+                <br>
+                <?php
+
+
+                $post_id = $gridfourthText->post->ID;
+                $custom_field = get_post_meta($post_id, 'Hashtag', true); ?>
+                <?php echo $custom_field ?>
+              </p>
+
+
+
+
+
         </div>
 
         <div class="emoji">
-          <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text?>">
+          <?php $thumbnail_id = get_post_thumbnail_id($gridfourthText->ID);
+              $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+              $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
+          <img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $alt_text ?>">
+        <?php endwhile; ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
         </div>
       </div>
     </div>
-    <div id="workshop"> 
-      
+    <div id="workshop">
 
-    
-      <div class="left">
-        <div class="textcontainer">
-          <h2> <br>RUNDE SEMMERL</h2>
-          <p>
-            Weil anscheinend immer noch nicht logisch ist, kannst du jetzt bei Ben einen Workshop für runde Semmerl
-            machen. Oder deine ganze Abteilung. Mach dein nächstes Wochende zu einem unglaublichen Backfest!
-          </p>
-        </div>
-      </div>
+      <?php
+      $gridfourthText = new WP_Query(array('name' => 'grid-ca'));
+      if ($gridfourthText->have_posts()) :
+        while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
 
-      <div class="right">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/workshop.jpg" alt="group of bakers doing their best">
 
-      </div>
+
+
+
+          <div class="left">
+            <div class="textcontainer">
+              <h2> <br> <?php the_title() ?> </h2>
+              <p>
+                <?php the_content() ?>
+              <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+              </p>
+            </div>
+          </div>
+
+          <div class="right">
+            <?php
+            $thirdPhoto = get_page_by_path('grid-cb-third-photo', OBJECT, 'post');
+            $thumbnail_id = get_post_thumbnail_id($thirdPhoto->ID);
+            $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+            $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
+
+            <img src="<?php echo $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
+            <?php wp_reset_postdata(); ?>
+          </div>
 
     </div>
-    <div id="hiring">
-      <div class="left">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/hiring.svg" alt="hiring font">
+    <div id="hiring" >
+   <?php $fourthPhoto = get_page_by_path('grid-da-fourth-photo', OBJECT, 'post');
+            $thumbnail_id = get_post_thumbnail_id($fourthPhoto->ID);
+            $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+            $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
+      <div class="left" style="background-image:url(<?php echo  $thumbnail_url ?>">
+      <?php wp_reset_postdata(); ?>
+      <?php
+            $hiringFont = get_page_by_path('hiring-font', OBJECT, 'post');
+            $thumbnail_id = get_post_thumbnail_id($hiringFont->ID);
+            $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+            $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>
 
+            <img src="<?php echo $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
+            <?php wp_reset_postdata(); ?>
       </div>
       <div class="right">
         <div class="textcontainer">
-          <h2>VERBACKS'S NICHT! </h2>
+    <?php    $gridfourthText = new WP_Query(array('name' => 'grid-cb'));
+      if ($gridfourthText->have_posts()) :
+        while ($gridfourthText->have_posts()) : $gridfourthText->the_post(); ?>
+
+
+
+          <h2><?php the_title()?> </h2>
           <p>
-            Du glaubst du kriegst es gebacken?
-            Dann bewirb dich doch! Wir suchen immer nach fähigen Personen die unser Brand aufs nächste Level bringen
-            wollen!
+            <?php the_content()?>
           </p>
 
           <div class="buttonDivApp">
-            <a class="buttonApplication" href="#Job"> APPLY NOW!</a>
+<?php
+          $post_id = $gridfourthText->post->ID;
+            $custom_field = get_post_meta($post_id, 'Button', true); ?>
+            <a class="buttonApplication" href="#Job"> <?php echo $custom_field?> </a>
+
+            <?php endwhile; ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
           </div>
         </div>
       </div>
