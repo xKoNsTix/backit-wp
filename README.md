@@ -1,16 +1,16 @@
-# Aaron G. Miller's website
+# Ben bäckt WEBSITE
 
 
 ## Webdev-Dependencies
 `npm install`
  
 ## Live server / browser syncing
-`npx browser-sync dist -w`
+`node build.js` This is a custom browsersync script by me
 
 ### Please note when using browser-sync
-On Windows only `build.sh` on/after save will work with browser-sync. So only use clean-build.sh before you deploy.  
+On Windows - buy Mac .then{
 On MacOs you can always use clean-build.sh.
-
+}
 
 
 ## Build
@@ -25,8 +25,8 @@ Run `./build` to
 ### Clean Build
 Run `./clean-build` to build a new dist-folder from scratch.
 
+### Deployer
+deployer is customized. Adapted to Linux Webserver. Will keep 3 releases, grants access rights after every deploy. 
 
-## Deploy with netlify
-If you only need a static site and set up netlify, simply push to main, which then automatically triggers a new deployment.
 
 
