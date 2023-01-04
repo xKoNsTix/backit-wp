@@ -317,10 +317,15 @@
 
             <!-- contact form by Batuhan Baş, teşekkür ederim! -->
             <?php
-            $form = wpcf7_contact_form(74);
-            if(empty($form)){
-            $form = wpcf7_contact_form(144); // Replace 1 with the ID of the contact form
-            echo $form->form;
+            
+            $form74 = wpcf7_contact_form(74);
+            if ($form74){
+              $form=wpcf7_contact_form(74); // local form
+              echo $form->form;
+            }
+            else {
+              $form = wpcf7_contact_form(144); // online form 
+              echo $form->form;
             }
 
             ?>

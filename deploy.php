@@ -12,7 +12,7 @@ set('repository','git@github.com:xKoNsTix/backit-wp.git');
 //Before WP
 
 set('shared_files', ['public/wp-config.php', 'public/.htaccess']);
-// set('shared_dirs', ['public/wp-content/uploads']);
+set('shared_dirs', ['public/wp-content/uploads']);
 set('keep_releases', 3);
 
 
