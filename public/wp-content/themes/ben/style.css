@@ -298,7 +298,7 @@ body {
   opacity: 1;
   filter: blur 5px;
   transform: translateX(-10%);
-  transition: all 1s;
+  transition: all 2s;
   height: 100%;
 }
 .hero .leftArea .show {
@@ -668,9 +668,6 @@ body {
   vertical-align: center;
   background-color: #e8d7ce;
 }
-#hiring .textcontainer .buttonDivApp {
-  margin-top: -5vh;
-}
 #hiring .right {
   width: 50%;
   height: 65vh;
@@ -684,14 +681,14 @@ body {
   flex-direction: column;
   position: relative;
 }
-#hiring .right .hidden {
+#hiring .right .textcontainer .hidden {
   opacity: 0;
   filter: blur 0px;
   transform: translateX(30px);
   transition: all 0.7s;
   height: 100%;
 }
-#hiring .right .show {
+#hiring .right .textcontainer .show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
@@ -846,14 +843,14 @@ body {
   }
   #workshop {
     display: flex;
-    height: 50vh;
+    height: 55vh;
     width: 100%;
     vertical-align: center;
     background-color: #dcc2b3;
   }
   #workshop .left {
     width: 100%;
-    height: 50vh;
+    height: 55vh;
     align-items: center;
     align-content: space-around;
     padding-top: auto;
@@ -864,6 +861,17 @@ body {
     flex-direction: column;
     background-image: url("images/workshop_blur.jpg");
     background-size: cover;
+  }
+  #workshop .left .textcontainer {
+    align-items: center;
+    align-content: space-around;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin: auto;
+    padding-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
   }
   #workshop .left h2,
 #workshop .left p {
@@ -928,14 +936,6 @@ body {
     width: 0%;
     height: 50vh;
   }
-}
-#workshop {
-  display: flex;
-  flex-direction: row;
-  height: 65vh;
-  width: 100%;
-  vertical-align: center;
-  background-color: #dcc2b3;
 }
 #workshop .left .hidden {
   opacity: 0;
@@ -1160,20 +1160,6 @@ body {
   text-align: center;
   z-index: 999;
 }
-#shopArea .midDiv .hidden {
-  opacity: 0;
-  filter: blur 0px;
-  transform: translateY(-30px);
-  transition: all 2.5s;
-  height: 100%;
-}
-#shopArea .midDiv .show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-  transform: translateY(0);
-  max-height: 100%;
-}
 #shopArea .midDiv .textcontainer {
   display: flex;
   flex-direction: column;
@@ -1184,6 +1170,23 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+#shopArea .midDiv .textcontainer .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(-100px);
+  transition: all 1.5s;
+  height: 100%;
+}
+#shopArea .midDiv .textcontainer .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+  align-items: center;
+  text-align: center;
+  align-items: center;
 }
 @media (min-width: 900px) {
   #shopArea .midDiv .textcontainer {
@@ -1202,8 +1205,8 @@ body {
   line-height: 36px;
   max-width: 475px;
   color: white;
-  text-align: center;
   max-width: 450px;
+  margin: auto;
 }
 #shopArea .imageright {
   width: 33.333%;

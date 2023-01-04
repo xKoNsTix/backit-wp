@@ -9,21 +9,6 @@
   overflow-x: hidden;
   overflow-y: hidden;
   .midDiv {
-    .hidden {
-      opacity: 0;
-      filter: blur (0px);
-      transform: translateY(-30px);
-      transition: all 2.5s;
-      height: 100%;
-    }
-    .show {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateX(0);
-      transform: translateY(0);
-      max-height: 100%;
-    }
-
     align-items: center;
     width: 50%;
     height: 80vh;
@@ -32,6 +17,23 @@
     text-align: center;
     z-index: 999;
     .textcontainer {
+      .hidden {
+        opacity: 0;
+        filter: blur (0px);
+        transform: translateY(-100px);
+        transition: all 1.5s;
+        height: 100%;
+      }
+      .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transform: translateY(0);
+        max-height: 100%;
+        align-items: center;
+        text-align: center;
+        align-items: center;
+      }
       display: flex;
       flex-direction: column;
 
@@ -44,7 +46,7 @@
       display: flex;
       flex-direction: column;
       // align-items: center;
-      @media(min-width:900px){
+      @media (min-width: 900px) {
         align-items: center;
       }
 
@@ -61,8 +63,10 @@
         line-height: 36px;
         max-width: 475px;
         color: white;
-        text-align: center;
+
         max-width: 450px;
+
+        margin:auto;
       }
     }
   }
@@ -182,7 +186,6 @@
         bottom: -5%;
         z-index: 998;
         @keyframes shake {
-          
         }
       }
     }

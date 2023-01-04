@@ -229,9 +229,12 @@
         <img src="<?php echo $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
         <?php wp_reset_postdata(); ?>
       </div>
+
       <div class="right">
-        <div class="hidden">
-          <div class="textcontainer">
+
+        <!-- <div class="hidden"> -->
+        <div class="textcontainer">
+          <div class="hidden">
             <?php $shop = new WP_Query(array('name' => 'grid-cb'));
             if ($shop->have_posts()) :
               while ($shop->have_posts()) : $shop->the_post(); ?>
@@ -254,6 +257,7 @@
               <?php wp_reset_postdata(); ?>
                 </div>
           </div>
+          <!-- </div> -->
         </div>
       </div>
     </div>
@@ -269,8 +273,9 @@
         <img alt="Willsch ein Backpfeiffe Merch" id='eyebrow'>
       </div>
       <div class="midDiv">
-        <div class="hidden">
-          <div class="textcontainer">
+
+        <div class="textcontainer">
+          <div class="hidden">
             <?php
             $shop = new WP_Query(array('name' => 'shop'));
             if ($shop->have_posts()) :
@@ -282,6 +287,7 @@
                 <?php $post_id = $shop->post->ID;
                 $custom_field = get_post_meta($post_id, 'ShopButton', true); ?>
                 <div class="buttonShopArea">
+
                   <?php $page = get_page_by_path('shop');
                   $link = get_permalink($page) ?>
                   <a class="buttonShop" href="<?php echo $link ?>"><?php echo $custom_field ?> </a>
@@ -323,62 +329,62 @@
     </div>
     <div class="contact">
 
-        <div class="left">
-          <div class="contactText">
-            <?php
-            $contact = new WP_Query(array('name' => 'contact'));
-            if ($contact->have_posts()) :
-              while ($contact->have_posts()) : $contact->the_post();
-                $post_id = $contact->post->ID;
-                $tel = get_post_meta($post_id, 'telephone', true);
-                $mail = get_post_meta($post_id, 'email', true);
-                $fullAdress = get_post_meta($post_id, 'fullAdress', true);
-                $postIDandCity = get_post_meta($post_id, 'postIDandCity', true);
-                $street = get_post_meta($post_id, 'street', true);
-                $name = get_post_meta($post_id, 'name', true);
-            ?>
-                <p><?php echo $name; ?></p>
-                <a href="tel:+43<?php echo $tel ?>"> <?php echo $tel ?> </a><br>
-                <a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a><br><br>
-                <a href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode($fullAddress); ?>" target="_blank" rel="noopener noreferrer"><?php echo $street ?>,<br> <?php echo $postIDandCity ?></a>
-              <?php endwhile; ?>
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </div>
-        </div>
-        <?php
-        $post = get_page_by_path('contact', OBJECT, 'post');
-        $thumbnail_id = get_post_thumbnail_id($post->ID);
-        $thumbnail_url = wp_get_attachment_url($thumbnail_id);
-        $alt_text = get_post_meta($post, '_wp_attachment_image_alt', true); ?>
-        <div class="mid">
-          <img src="<?php echo  $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
-
-
-        </div>
-
-        <div class="right">
-
-          <div class="contactText">
-
-            <?php
-            $contact = new WP_Query(array('name' => 'contact'));
-            if ($contact->have_posts()) :
-              while ($contact->have_posts()) : $contact->the_post();
-                $ImpressumLink = get_post_meta($post_id, 'ImpressumLink', true);
-                $ImpressumText = get_post_meta($post_id, 'ImpressumText', true);
-                $CopyRightText = get_post_meta($post_id, 'CopyrightText', true);
-
-            ?>
-
-                <a href="<?php echo $ImpressumLink ?> "><?php echo $ImpressumText ?></a>
-                <p><?php echo $CopyRightText ?></p>
-              <?php endwhile; ?>
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </div>
+      <div class="left">
+        <div class="contactText">
+          <?php
+          $contact = new WP_Query(array('name' => 'contact'));
+          if ($contact->have_posts()) :
+            while ($contact->have_posts()) : $contact->the_post();
+              $post_id = $contact->post->ID;
+              $tel = get_post_meta($post_id, 'telephone', true);
+              $mail = get_post_meta($post_id, 'email', true);
+              $fullAdress = get_post_meta($post_id, 'fullAdress', true);
+              $postIDandCity = get_post_meta($post_id, 'postIDandCity', true);
+              $street = get_post_meta($post_id, 'street', true);
+              $name = get_post_meta($post_id, 'name', true);
+          ?>
+              <p><?php echo $name; ?></p>
+              <a href="tel:+43<?php echo $tel ?>"> <?php echo $tel ?> </a><br>
+              <a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a><br><br>
+              <a href="https://www.google.com/maps/search/?api=1&query=<?php echo urlencode($fullAddress); ?>" target="_blank" rel="noopener noreferrer"><?php echo $street ?>,<br> <?php echo $postIDandCity ?></a>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
         </div>
       </div>
+      <?php
+      $post = get_page_by_path('contact', OBJECT, 'post');
+      $thumbnail_id = get_post_thumbnail_id($post->ID);
+      $thumbnail_url = wp_get_attachment_url($thumbnail_id);
+      $alt_text = get_post_meta($post, '_wp_attachment_image_alt', true); ?>
+      <div class="mid">
+        <img src="<?php echo  $thumbnail_url ?>" alt="<?php echo $alt_text ?>">
+
+
+      </div>
+
+      <div class="right">
+
+        <div class="contactText">
+
+          <?php
+          $contact = new WP_Query(array('name' => 'contact'));
+          if ($contact->have_posts()) :
+            while ($contact->have_posts()) : $contact->the_post();
+              $ImpressumLink = get_post_meta($post_id, 'ImpressumLink', true);
+              $ImpressumText = get_post_meta($post_id, 'ImpressumText', true);
+              $CopyRightText = get_post_meta($post_id, 'CopyrightText', true);
+
+          ?>
+
+              <a href="<?php echo $ImpressumLink ?> "><?php echo $ImpressumText ?></a>
+              <p><?php echo $CopyRightText ?></p>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
+        </div>
+      </div>
+    </div>
     </div>
 
 
