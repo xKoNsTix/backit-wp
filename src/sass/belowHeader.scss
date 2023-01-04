@@ -2,15 +2,19 @@
 
 .greenquote {
   height: 65vh;
+  @media(max-height:900px){
+    height:100vh;
+  }
   background-color: $color-main;
   font-family: "Roboto";
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
 
   .sake {
     font-size: 150px;
-    
+
     margin-top: 0;
     top: 0;
     text-align: top;
@@ -20,16 +24,44 @@
     padding-top: 0 !important;
     height: auto;
 
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateX(0%);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
+
     h1 {
       text-align: top;
       color: #242529;
       margin-top: -1px !important;
       padding-top: -20px !important;
-
     }
   }
 
   .zeit {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateX(0%);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
     font-size: 56px;
     text-align: center;
 
@@ -40,6 +72,22 @@
     }
   }
   .oida {
+    .hidden {
+      opacity: 0;
+      filter: blur (100px);
+      transform: translatey(+50%);
+      transition: all 0.7s;
+      height: 100%;
+      animation:none;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+      animation: blink 3s linear infinite;
+    }
     font-size: 48px;
     p {
       color: white;
@@ -52,7 +100,7 @@
 @media (max-width: 900px) {
   .greenquote {
     height: 60vh;
-    position:relative;
+    position: relative;
     top: 5vh;
 
     .sake {
@@ -63,27 +111,25 @@
         font-weight: 300;
         text-align: left;
         margin-bottom: 0 !important;
-        margin-left:15%;
+        margin-left: 15%;
       }
     }
     .zeit {
-      position:absolute;
-      bottom:5vh;
+      position: absolute;
+      bottom: 5vh;
       p {
-
         font-size: 50%;
         font-weight: 100;
         text-align: left;
         margin-top: 5vh;
-        margin-left:15%;
+        margin-left: 15%;
       }
     }
     .oida {
-      width:0;
-        height:0;
+      width: 0;
+      height: 0;
       p {
         opacity: 0;
-        
       }
     }
   }

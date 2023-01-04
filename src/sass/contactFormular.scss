@@ -1,11 +1,31 @@
 /** @format */
 
+.overAllContact {
+  background-color: #b69a89;
+  overflow:hidden;
+
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateY(+300px);
+      transition: all 2s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
+  }
+
 .contactFormular {
   overflow: hidden;
   font-family: "Outfit";
   height: 70vh;
-  @media(max-height:900px){
-    height:120vh;
+  @media (max-height: 900px) {
+    height: 120vh;
   }
   background-color: #b69a89;
   display: flex;
@@ -14,11 +34,11 @@
   width: 100%;
   .contactWrapper {
     width: 99%;
-height: 100vh;
-  background-color: #b69a89;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 100vh;
+    background-color: #b69a89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     body {
       display: flex;
@@ -40,7 +60,6 @@ height: 100vh;
       color: rgba(0, 0, 0, 0.3);
       font-size: 60px;
       text-transform: uppercase;
-
     }
 
     .card .row {
@@ -50,8 +69,7 @@ height: 100vh;
       grid: auto / auto auto;
       grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
       grid-gap: 30px;
-      max-height:99%;
-
+      max-height: 99%;
     }
 
     .card .row .col {
@@ -146,8 +164,8 @@ height: 100vh;
   }
 }
 
-@media(max-width:900px){
+@media (max-width: 900px) {
   .contactFormular {
-    display:none;
+    display: none;
   }
 }

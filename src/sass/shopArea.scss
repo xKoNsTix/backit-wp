@@ -9,6 +9,21 @@
   overflow-x: hidden;
   overflow-y: hidden;
   .midDiv {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateY(-30px);
+      transition: all 2.5s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
+
     align-items: center;
     width: 50%;
     height: 80vh;

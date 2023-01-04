@@ -45,6 +45,21 @@
   background-color: #dcc2b3;
 
   .left {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateX(-30px);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
+
     width: 50%;
 
     align-items: center;
@@ -60,6 +75,21 @@
   .right {
     width: 50%;
     height: 65vh;
+
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateX(+30px);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
 
     img {
       width: 100%;
@@ -80,6 +110,21 @@
   background-color: #e8d7ce;
 
   .right {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateY(-30px);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
+
     width: 50%;
     height: 65vh;
 
@@ -93,6 +138,20 @@
     flex-direction: column;
     position: relative;
     .emoji {
+      .hidden {
+        opacity: 0;
+        filter: blur (0px);
+        transform: translateX(0px);
+        transition: all 1.5s;
+        height: 100%;
+      }
+      .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transform: translateY(0);
+        max-height: 100%;
+      }
       position: absolute;
       bottom: -4.5px;
       right: 10%;
@@ -104,10 +163,40 @@
   }
 
   .left {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateY(-30px);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
+
     width: 50%;
     height: 65vh;
 
     img {
+      .hidden {
+        opacity: 0;
+        filter: blur (0px);
+        transform: translateY(-30px);
+        transition: all 0.7s;
+        height: 100%;
+      }
+      .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transform: translateY(0);
+        max-height: 100%;
+      }
+
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -122,13 +211,27 @@
   width: 100%;
   vertical-align: center;
   background-color: #e8d7ce;
-  .textcontainer{
-    .buttonDivApp{
+  .textcontainer {
+    .buttonDivApp {
       margin-top: -5vh;
     }
   }
 
   .right {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateX(+30px);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
     width: 50%;
     height: 65vh;
 
@@ -183,8 +286,8 @@
     width: 100%;
     vertical-align: center;
     background-color: #dcc2b3;
-.textcontainer{
-  align-items: center;
+    .textcontainer {
+      align-items: center;
       align-content: space-around;
       padding-top: auto;
       padding-bottom: auto;
@@ -192,8 +295,7 @@
       padding-bottom: auto;
       display: flex;
       flex-direction: column;
-
-}
+    }
     .left {
       width: 100%;
       height: 60vh;
@@ -216,9 +318,6 @@
         text-align: left;
         margin-left: 20%;
         margin-right: 20%;
-
-
-
       }
       p {
         line-height: 20px;
@@ -396,9 +495,7 @@
       position: relative;
       background-image: url("images/chalkboard.jpg");
       background-size: cover;
-      
 
-     
       h2,
       p {
         color: white;
@@ -407,14 +504,12 @@
         margin-right: 20%;
         align-items: inherit;
         align-content: inherit;
-        
       }
 
       p {
         line-height: 20px;
-        
       }
-      
+
       align-items: inherit;
       align-content: inherit;
     }
@@ -422,6 +517,51 @@
     .left {
       width: 0%;
       height: 50vh;
+    }
+  }
+}
+
+// Abweichende JS Animations in Workshop Area:
+
+#workshop {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+  width: 100%;
+  vertical-align: center;
+  background-color: #dcc2b3;
+
+  .left {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateY(-30px);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
+    }
+  }
+
+  .right {
+    .hidden {
+      opacity: 0;
+      filter: blur (0px);
+      transform: translateY(0px);
+      transition: all 0.7s;
+      height: 100%;
+    }
+    .show {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+      transform: translateY(0);
+      max-height: 100%;
     }
   }
 }

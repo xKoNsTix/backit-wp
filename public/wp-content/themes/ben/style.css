@@ -294,6 +294,20 @@ body {
   top: 25%;
   bottom: 50%;
 }
+.hero .leftArea .hidden {
+  opacity: 1;
+  filter: blur 5px;
+  transform: translateX(-10%);
+  transition: all 1s;
+  height: 100%;
+}
+.hero .leftArea .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
 @media (max-width: 900px) {
   .hero .leftArea {
     align-items: center;
@@ -326,6 +340,12 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
+}
+@media (max-height: 900px) {
+  .greenquote {
+    height: 100vh;
+  }
 }
 .greenquote .sake {
   font-size: 150px;
@@ -338,6 +358,20 @@ body {
   padding-top: 0 !important;
   height: auto;
 }
+.greenquote .sake .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateX(0%);
+  transition: all 0.7s;
+  height: 100%;
+}
+.greenquote .sake .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
 .greenquote .sake h1 {
   text-align: top;
   color: #242529;
@@ -348,6 +382,20 @@ body {
   font-size: 56px;
   text-align: center;
 }
+.greenquote .zeit .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateX(0%);
+  transition: all 0.7s;
+  height: 100%;
+}
+.greenquote .zeit .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
 .greenquote .zeit p {
   color: white;
   margin-top: 0;
@@ -355,6 +403,22 @@ body {
 }
 .greenquote .oida {
   font-size: 48px;
+}
+.greenquote .oida .hidden {
+  opacity: 0;
+  filter: blur 100px;
+  transform: translatey(50%);
+  transition: all 0.7s;
+  height: 100%;
+  animation: none;
+}
+.greenquote .oida .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+  animation: blink 3s linear infinite;
 }
 .greenquote .oida p {
   color: white;
@@ -456,10 +520,42 @@ body {
   display: flex;
   flex-direction: column;
 }
+.first .left .hidden,
+#workshop .left .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateX(-30px);
+  transition: all 0.7s;
+  height: 100%;
+}
+.first .left .show,
+#workshop .left .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
 .first .right,
 #workshop .right {
   width: 50%;
   height: 65vh;
+}
+.first .right .hidden,
+#workshop .right .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateX(30px);
+  transition: all 0.7s;
+  height: 100%;
+}
+.first .right .show,
+#workshop .right .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
 }
 .first .right img,
 #workshop .right img {
@@ -489,11 +585,39 @@ body {
   flex-direction: column;
   position: relative;
 }
+.second .right .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(-30px);
+  transition: all 0.7s;
+  height: 100%;
+}
+.second .right .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
 .second .right .emoji {
   position: absolute;
   bottom: -4.5px;
   right: 10%;
   width: 50px;
+}
+.second .right .emoji .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateX(0px);
+  transition: all 1.5s;
+  height: 100%;
+}
+.second .right .emoji .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
 }
 .second .right .emoji img {
   width: 70px;
@@ -502,10 +626,38 @@ body {
   width: 50%;
   height: 65vh;
 }
+.second .left .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(-30px);
+  transition: all 0.7s;
+  height: 100%;
+}
+.second .left .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
 .second .left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.second .left img .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(-30px);
+  transition: all 0.7s;
+  height: 100%;
+}
+.second .left img .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
 }
 
 #hiring {
@@ -531,6 +683,20 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+#hiring .right .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateX(30px);
+  transition: all 0.7s;
+  height: 100%;
+}
+#hiring .right .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
 }
 #hiring .left {
   width: 50%;
@@ -763,6 +929,43 @@ body {
     height: 50vh;
   }
 }
+#workshop {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+  width: 100%;
+  vertical-align: center;
+  background-color: #dcc2b3;
+}
+#workshop .left .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(-30px);
+  transition: all 0.7s;
+  height: 100%;
+}
+#workshop .left .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
+#workshop .right .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(0px);
+  transition: all 0.7s;
+  height: 100%;
+}
+#workshop .right .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
+
 /** @format */
 .buttonDivApp {
   align-items: center;
@@ -956,6 +1159,20 @@ body {
   flex-direction: column;
   text-align: center;
   z-index: 999;
+}
+#shopArea .midDiv .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(-30px);
+  transition: all 2.5s;
+  height: 100%;
+}
+#shopArea .midDiv .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
 }
 #shopArea .midDiv .textcontainer {
   display: flex;
@@ -2034,6 +2251,25 @@ footer .right .spanright a {
   }
 }
 /** @format */
+.overAllContact {
+  background-color: #b69a89;
+  overflow: hidden;
+}
+.overAllContact .hidden {
+  opacity: 0;
+  filter: blur 0px;
+  transform: translateY(300px);
+  transition: all 2s;
+  height: 100%;
+}
+.overAllContact .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: translateY(0);
+  max-height: 100%;
+}
+
 .contactFormular {
   overflow: hidden;
   font-family: "Outfit";
