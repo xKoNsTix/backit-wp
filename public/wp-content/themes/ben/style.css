@@ -240,7 +240,7 @@ body {
   margin: 0;
 }
 .text .topRight {
-  width: 50%;
+  width: 70%;
   text-align: right;
   margin-right: 2%;
   margin-top: 0;
@@ -1565,6 +1565,9 @@ footer .right .spanright a {
 .menu .button_container.active a .menu .overlay.open li:nth-of-type(4) {
   animation-delay: 0.65s;
 }
+.menu .button_container.active a .menu .overlay.open li:nth-of-type(5) {
+  animation-delay: 0.75s;
+}
 .menu .button_container.active a .menu .overlay nav {
   position: relative;
   height: 70%;
@@ -1705,6 +1708,9 @@ footer .right .spanright a {
 }
 .menu .overlay.open li:nth-of-type(4) {
   animation-delay: 0.65s;
+}
+.menu .overlay.open li:nth-of-type(5) {
+  animation-delay: 0.75s;
 }
 .menu .overlay nav {
   position: relative;
@@ -1963,12 +1969,17 @@ footer .right .spanright a {
   .shopMain {
     display: flex;
     flex-direction: column;
+    height: 200vh;
+  }
+  .shopMain h1 {
+    margin-bottom: 50px;
   }
   .shopMain .leftSide {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    height: 100vh;
   }
   .shopMain .leftSide .roundedges {
     height: 50vh;
@@ -1996,6 +2007,7 @@ footer .right .spanright a {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    height: 100vh;
   }
   .shopMain .rightSide .roundedges {
     height: 50vh;

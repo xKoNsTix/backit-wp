@@ -3,12 +3,7 @@
 <body>
   <?php wp_body_open(); ?>
 
-  <!-- This script is to parse the path into js as well for the shop area, i know it is a bit messy but it was the quickest solution (yet) -->
-  <script>
-    var templateDirectoryUri = '<?php echo get_template_directory_uri(); ?>';
-  </script>
-  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
-
+ 
 
 
 

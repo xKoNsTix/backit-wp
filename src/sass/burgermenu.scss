@@ -255,6 +255,9 @@
               &:nth-of-type(4) {
                 animation-delay: 0.65s;
               }
+              &:nth-of-type(5) {
+                animation-delay: 0.75s;
+              }
             }
           }
           nav {
@@ -419,6 +422,9 @@
         }
         &:nth-of-type(4) {
           animation-delay: 0.65s;
+        }
+        &:nth-of-type(5) {
+          animation-delay: 0.75s;
         }
       }
     }

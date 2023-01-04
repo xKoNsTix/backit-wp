@@ -53,4 +53,5 @@ Template Name: Shop Template
 
 
 </section>
+
 <?php get_footer('custom'); ?>

@@ -51,3 +51,6 @@ rsconnect/
 /public/wp-config.php
 node_modules/
 .DS_Store
+build.js
+deploy.php
+build.js
