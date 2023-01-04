@@ -6,7 +6,7 @@ Template Name: About Template
 ?>
 <?php get_header('own'); ?>
 <body>
-    <!-- <div class="topLine"></div> -->
+
     <section class="aboutMain">
 
         <div class="imageDiv">
