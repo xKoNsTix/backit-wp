@@ -67,12 +67,24 @@ Since it is dangerous to go alone, take this kitten:
 
     <div class="overlay" id="overlay">
       <nav class="overlay-menu">
-        <ul>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/page-about.php">About</a></li>
+        <!-- <ul> -->
+          <!-- <li><a href="<?//php echo get_template_directory_uri(); ?>/single-about.php">About</a></li>
           <li><a href="index.php#workshop">Workshops</a></li>
           <li><a href="index.php#hiring">Jobs</a></li>
-          <li><a href="<?php echo get_template_directory_uri(); ?>/page-shop.php">Shop</a></li>
-        </ul>
+          <li><a href="<? //php echo get_template_directory_uri(); ?>/single-shop.php">Shop</a></li> -->
+
+          <?php
+        $menu_name = 'MainMenuDesktop';
+        $menu_locations = get_nav_menu_locations();
+        $menu_id = $menu_locations[$menu_name];
+        $menu = wp_get_nav_menu_object($menu_id);
+        wp_nav_menu(array(
+          'menu' => $menu,
+          'container' => false,
+          'echo' => true,
+          'fallback_cb' => false
+        ));?>
+        <!-- </ul> -->
       </nav>
     </div>
   </div>
@@ -101,11 +113,26 @@ Since it is dangerous to go alone, take this kitten:
       </div>
 
       <div class="topRight">
-        <a href="<?php echo get_template_directory_uri(); ?>/page-about.php">ABOUT</a>
+        <!-- <a href="<?php //echo get_template_directory_uri(); 
+                      ?>/single-about.php">ABOUT</a>
 
         <a href="index.php#workshop">WORKSHOPS</a>
         <a href="index.php#hiring">JOBS</a>
-        <a href="<?php echo get_template_directory_uri(); ?>/page-shop.php">SHOP</a>
+        <a href="<?php //echo get_template_directory_uri(); 
+                  ?>/single-shop.php">SHOP</a> -->
+                  <!-- WP MENU HERE -->
+        <?php
+        $menu_name = 'MainMenuDesktop';
+        $menu_locations = get_nav_menu_locations();
+        $menu_id = $menu_locations[$menu_name];
+        $menu = wp_get_nav_menu_object($menu_id);
+        wp_nav_menu(array(
+          'menu' => $menu,
+          'container' => false,
+          'echo' => true,
+          'fallback_cb' => false
+        ));
+        ?>
       </div>
     </div>
   </section>

@@ -27,12 +27,15 @@ function add_svg_support() { //svg functionality
    
 add_action('wp_enqueue_scripts', 'load_styles_and_scripts');
 add_theme_support('post-thumbnails'); //post thumbnails
-?>
 
-<?php
-  // Load the header.php file
-  //
-  
-  
 
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' ),
+      'extra-menu' => __( 'Extra Menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );
 ?>

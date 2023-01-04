@@ -1,13 +1,17 @@
+
 <?php
-require_once( dirname( __FILE__ ) . '/../../../wp-blog-header.php' ); ?>
+/*
+Template Name: About Template
+*/
+?>
 <?php get_header('own'); ?>
 <body>
     <!-- <div class="topLine"></div> -->
     <section class="aboutMain">
 
         <div class="imageDiv">
-            <img src="images/about1.png" class="image-1">
-            <img src="images/about2.png" class="image-2">
+            <img src="<?php echo get_template_directory_uri()?>/images/about1.png" class="image-1">
+            <img src="<?php echo get_template_directory_uri()?>/images/about2.png" class="image-2">
 
         </div>
         <div class="txt">
@@ -26,7 +30,7 @@ require_once( dirname( __FILE__ ) . '/../../../wp-blog-header.php' ); ?>
 
                     <?php endwhile; ?>
                 <?php endif; ?>
-                <?php wp_reset_postdata(); ?>
+                <?php wp_reset_postdata(); //1?>
             </div>
         </div>
 

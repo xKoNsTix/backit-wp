@@ -1,4 +1,4 @@
-<?php get_header('own');?>
+<?php get_header('own'); ?>
 
 <body>
   <?php wp_body_open(); ?>
@@ -11,7 +11,7 @@
 
 
 
-  
+
   <div class="topLine"></div>
   <?php
   $post = get_page_by_path('hero-photo', OBJECT, 'post');
@@ -33,7 +33,7 @@
       </div>
 
       <div class="rightArea">
-        <!-- DUMMY -->
+        <!-- DUMMY-->
       </div>
     </div>
 
@@ -269,7 +269,9 @@
               <?php $post_id = $shop->post->ID;
               $custom_field = get_post_meta($post_id, 'ShopButton', true); ?>
               <div class="buttonShopArea">
-                <a class="buttonShop" href="<?php echo get_template_directory_uri(); ?>/page-shop.php"><?php echo $custom_field ?> </a>
+                <?php $page = get_page_by_path('shop');
+                $link = get_permalink($page) ?>
+                <a class="buttonShop" href="<?php echo $link ?>"><?php echo $custom_field ?> </a>
               </div>
 
             <?php endwhile; ?>
@@ -288,17 +290,17 @@
     </div>
 
     <div class="contactFormular">
-    <div class="contactWrapper">
-      
-      <!-- contact form by Batuhan Baş, teşekkür ederim! -->
-      <?php
-      $form = wpcf7_contact_form(74); // Replace 1 with the ID of the contact form
-      echo $form->form;
+      <div class="contactWrapper">
+
+        <!-- contact form by Batuhan Baş, teşekkür ederim! -->
+        <?php
+        $form = wpcf7_contact_form(74); // Replace 1 with the ID of the contact form
+        echo $form->form;
 
 
-      ?>
+        ?>
+      </div>
     </div>
-  </div>
     <div class="contact">
       <div class="left">
         <div class="contactText">
@@ -358,8 +360,7 @@
 
     </div>
   </section>
-  
-  
 
-  <?php get_footer('custom');?>
 
+
+  <?php get_footer('custom'); ?>

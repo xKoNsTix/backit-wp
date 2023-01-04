@@ -11,6 +11,15 @@
     height: 0vh;
     min-height:0;
   }
+  li{ // for dynamic WP Menu!!!!
+    
+    text-decoration:none;
+    display:inline-flex;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+    
+  }
 }
 
 .text {
@@ -47,7 +56,7 @@
     width: 50%;
     text-align: right;
     margin-right: 2%;
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: auto;
     vertical-align: center;
     @media (max-width: 900px) {
@@ -61,9 +70,12 @@
       padding-bottom: auto;
       font-size: 24px;
       vertical-align: middle;
-      margin: 2%;
+      margin: -5px 7.5px 0px 7.5px; // came after wp install
+      
       vertical-align: center;
     }
+
+    
   }
 }
 .topLine {

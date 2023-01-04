@@ -1,3 +1,4 @@
+<!-- FOOTER START -->
 <footer>
     <div class="left">
       <p> © 2023 BenBäckt Industries</p>
@@ -20,3 +21,5 @@
 
 
 </html>
+
+<!-- FOOTER END -->

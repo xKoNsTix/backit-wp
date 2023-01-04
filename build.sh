@@ -15,6 +15,7 @@
 #After WP
 npx sass ./src/sass/style.scss ./public/wp-content/themes/ben/style.css
 # cp ./src/favicons/*.* ./public/wp-content/themes/ben
+
 cp ./src/php/*.* ./public/wp-content/themes/ben
 cp ./src/php/template-parts/*.* ./public/wp-content/themes/ben
 cp -r./src/images ./public/wp-content/themes/ben/images
