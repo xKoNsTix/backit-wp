@@ -102,8 +102,13 @@ Since it is dangerous to go alone, take this kitten:
 
           // The Loop
           if ($shop->have_posts()) :
-            while ($shop->have_posts()) : $shop->the_post(); ?>
-             <a href="/public/index.php" style="text-decoration: none;">
+            while ($shop->have_posts()) : $shop->the_post();
+              $slug = 'main';
+              $page = get_page_by_path($slug);
+              // page was found
+              $link = get_permalink($page->ID);
+          ?>
+             <a href="<?php echo $link ?>" style="text-decoration: none;">
                <p><?php the_content(); ?>
                  <p>
              </a>

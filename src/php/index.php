@@ -317,9 +317,11 @@
 
             <!-- contact form by Batuhan Baş, teşekkür ederim! -->
             <?php
-            $form = wpcf7_contact_form(74); // Replace 1 with the ID of the contact form
+            $form = wpcf7_contact_form(74);
+            if(empty($form)){
+            $form = wpcf7_contact_form(144); // Replace 1 with the ID of the contact form
             echo $form->form;
-
+            }
 
             ?>
           </div>
