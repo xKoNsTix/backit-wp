@@ -324,7 +324,7 @@
               echo $form->form;
             }
             else {
-              $form = wpcf7_contact_form(144); // online form 
+              $form = wpcf7_contact_form(152); // online form 
               echo $form->form;
             }
 
