@@ -56,7 +56,7 @@ Since it is dangerous to go alone, take this kitten:
 
 
 
-   <title><?php wp_title(); ?></title>
+   <title>Ben bäckt</title>
 
    <link rel="icon" href="/favicon_package_v0.16" />
    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
@@ -110,7 +110,7 @@ Since it is dangerous to go alone, take this kitten:
           ?>
              <a href="<?php echo $link ?>" style="text-decoration: none;">
                <p><?php the_content(); ?>
-                 <p>
+          </p>
              </a>
 
            <?php endwhile; ?>
