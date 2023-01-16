@@ -1,8 +1,3 @@
- <!-- This script is to parse the path into js as well for the shop area, i know it is a bit messy but it was the quickest solution (yet) -->
- <script>
-   var templateDirectoryUri = '<?php echo get_template_directory_uri(); ?>';
- </script>
- <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 
 
@@ -13,6 +8,11 @@
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <!-- This script is to parse the path into js as well for the shop area, i know it is a bit messy but it was the quickest solution (yet) -->
+ <script>
+   var templateDirectoryUri = '<?php echo get_template_directory_uri(); ?>';
+ </script>
+ <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 
    <!-- Thank your for being interested into the inner values of this homepage. 
@@ -56,7 +56,7 @@ Since it is dangerous to go alone, take this kitten:
 
 
 
-   <title><?php get_the_title(); ?></title>
+   <title><?php wp_title(); ?></title>
 
    <link rel="icon" href="/favicon_package_v0.16" />
    <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">

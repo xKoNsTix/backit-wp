@@ -9,7 +9,7 @@ const browserSync = require("browser-sync");
 const { exec } = require("child_process");
 
 const browsersync = browserSync({
-  proxy: "http://backit.localhost",
+  proxy: "backit.localhost",
   files: ["public/**/*"],
   watchOptions: {
     ignoreInitial: true,

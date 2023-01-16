@@ -1,7 +1,6 @@
 /** @format */
 
 .menu {
-  
   $color-main: $color-main;
   $color-background: $color-main;
   $color-active: #dcc2b3;
@@ -145,7 +144,7 @@
         .button_container {
           position: fixed;
           top: 4%;
-          left:4%;
+          left: 4%;
           height: $button-height;
           width: $button-width;
           cursor: pointer;

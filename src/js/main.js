@@ -1,6 +1,6 @@
 /** @format */
 
-console.log("HELLO YOU"+templateDirectoryUri);
+
 
 
 var int;
