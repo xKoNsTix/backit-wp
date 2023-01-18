@@ -1919,6 +1919,7 @@ footer .right .spanright a {
 .menu .overlay.open li {
   animation: fadeInRight 0.5s ease forwards;
   animation-delay: 0.35s;
+  margin-bottom: 6vh;
 }
 .menu .overlay.open li:nth-of-type(2) {
   animation-delay: 0.45s;
